@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/shik/js/script.js" => "14084432681119","/bitrix/templates/shik/js/libs.js" => "1408438731384731","/bitrix/templates/shik/js/suite.js" => "14084387302115","/bitrix/templates/shik/js/suite.min.js" => "14084387301299","/bitrix/js/fileman/sticker.js" => "140833866576622",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>
