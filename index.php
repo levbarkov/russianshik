@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
-?><h2>Лучшие коллекции</h2>
+?><h1> Лолват </h1>
+<h2>Лучшие коллекции</h2>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.top",
 	"",
@@ -58,8 +59,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"CONVERT_CURRENCY" => "N",
 		"OFFERS_CART_PROPERTIES" => array(0=>"ARTNUMBER",1=>"COLOR_REF",2=>"SIZES_SHOES",3=>"SIZES_CLOTHES",)
 	)
-);?>
-<!--<h2>Тренды сезона</h2>-->
+);?>&nbsp;<!--<h2>Тренды сезона</h2>-->
 <?
 /*
 $APPLICATION->IncludeComponent(

@@ -1,22 +1,15 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Доставка и оплата", 
-		"about/delivery/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"О компании", 
-		"about/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Контакты", 
 		"about/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка и оплата", 
+		"about/delivery/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -34,6 +27,13 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"CUser::IsAuthorized()" 
+	),
+	Array(
+		"О нас", 
+		"about", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>
