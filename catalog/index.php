@@ -3,12 +3,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_adapt_horizontal", SITE_ID) == "eshop_adapt_vertical" ? "HORIZONTAL" : "VERTICAL");
 ?>
 
-<?$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb",
-	"",
-	Array( "START_FROM" => "0", "PATH" => "", "SITE_ID" => SITE_ID )
-);?>
-
 <?$APPLICATION->IncludeComponent("bitrix:catalog", "shik", Array(
 	"IBLOCK_TYPE" => "catalog",	// Тип инфоблока
 	"IBLOCK_ID" => "2",	// Инфоблок
