@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001408443244';
-$dateexpire = '001408529644';
+$datecreate = '001408693852';
+$dateexpire = '001408780252';
 $ser_content = 'a:2:{s:7:"CONTENT";s:819:"<div
 	class="bx_item_list_bestsellers col4 bx_wood">
 <div class="bx_item_list_title">Лидеры продаж:</div>

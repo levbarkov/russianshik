@@ -32,6 +32,8 @@ nbproject
 #
 !/bitrix/managed_cache/
 /bitrix/managed_cache/*
+!/bitrix/stack_cache/
+/bitrix/stack_cache/*
 
 # Common
 !/.gitignore

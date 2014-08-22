@@ -1,33 +1,33 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001408455478';
-$dateexpire = '001444455478';
-$ser_content = 'a:2:{s:7:"CONTENT";s:6141:"<div class="bx_item_detail bx_wood" id="bx_385328537_320">
+$datecreate = '001408706236';
+$dateexpire = '001444706236';
+$ser_content = 'a:2:{s:7:"CONTENT";s:6141:"<div class="bx_item_detail bx_wood" id="bx_366100738_320">
 	<div class="bx_item_container">
 		<div class="bx_lt">
-<div class="bx_item_slider" id="bx_385328537_320_big_slider">
-	<div class="bx_bigimages id="bx_385328537_320_bigimg_cont">
+<div class="bx_item_slider" id="bx_366100738_320_big_slider">
+	<div class="bx_bigimages id="bx_366100738_320_bigimg_cont">
 		<div class="bx_bigimages_imgcontainer">
 			<span class="bx_bigimages_aligner"><img
-				id="bx_385328537_320_pict"
+				id="bx_366100738_320_pict"
 				src="/upload/iblock/f91/f91868130d92df7dbbcf6b876693c014.jpg"
 				alt="картинка Слон обыкновенный от магазина Одежда+"
 				title="картинка Слон обыкновенный магазин Одежда+ являющийся официальным дистрибьютором в России "
 			></span>
-			<div class="bx_stick_disc" id="bx_385328537_320_dsc_pict" style="display: none;"></div>
+			<div class="bx_stick_disc" id="bx_366100738_320_dsc_pict" style="display: none;"></div>
 		</div>
 	</div>
-	<div class="bx_slider_conteiner" id="bx_385328537_320_slider_cont">
+	<div class="bx_slider_conteiner" id="bx_366100738_320_slider_cont">
 		<div class="bx_slider_scroller_container">
 			<div class="bx_slide">
-				<ul style="width: 100%;" id="bx_385328537_320_slider_list">
+				<ul style="width: 100%;" id="bx_366100738_320_slider_list">
 					<li data-value="934" style="width: 20%; padding-top: 20%;"><span class="cnt"><span class="cnt_item" style="background-image:url(\'/upload/iblock/f91/f91868130d92df7dbbcf6b876693c014.jpg\');"></span></span></li>
 					<li data-value="935" style="width: 20%; padding-top: 20%;"><span class="cnt"><span class="cnt_item" style="background-image:url(\'/upload/iblock/20b/20b84ed88d8e6c51b7c883249a65f1a0.jpg\');"></span></span></li>
 					<li data-value="936" style="width: 20%; padding-top: 20%;"><span class="cnt"><span class="cnt_item" style="background-image:url(\'/upload/iblock/364/3647975fe8c883a009b1f22a4174b95b.jpg\');"></span></span></li>
 				</ul>
 			</div>
-			<div class="bx_slide_left" id="bx_385328537_320_slider_left" style="display: none;"></div>
-			<div class="bx_slide_right" id="bx_385328537_320_slider_right" style="display: none;"></div>
+			<div class="bx_slide_left" id="bx_366100738_320_slider_left" style="display: none;"></div>
+			<div class="bx_slide_right" id="bx_366100738_320_slider_right" style="display: none;"></div>
 		</div>
 	</div>
 </div>
@@ -40,39 +40,39 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:6141:"<div class="bx_item_detail bx_wood" i
 		<td>
 			<div class="bx_item_rating">
 				<div class="bx_stars_container">
-					<div id="bx_vo_2_320_4875_stars" class="bx_stars_bg"></div>
-					<div id="bx_vo_2_320_4875_progr" class="bx_stars_progres"></div>
+					<div id="bx_vo_2_320_7537_stars" class="bx_stars_bg"></div>
+					<div id="bx_vo_2_320_7537_progr" class="bx_stars_progres"></div>
 				</div>
 			</div>
 		</td>
 		<td>
-			<span id="bx_vo_2_320_4875_rating" class="bx_stars_rating_votes">(0)</span>
+			<span id="bx_vo_2_320_7537_rating" class="bx_stars_rating_votes">(0)</span>
 		</td>
 	</tr>
 </table>
 <script type="text/javascript">
 BX.ready(function(){
-	window.bx_vo_2_320_4875 = new JCIblockVoteStars({\'progressId\':\'bx_vo_2_320_4875_progr\',\'ratingId\':\'bx_vo_2_320_4875_rating\',\'starsId\':\'bx_vo_2_320_4875_stars\',\'ajaxUrl\':\'/bitrix/components/bitrix/iblock.vote/component.php\',\'voteId\':\'320\'});
+	window.bx_vo_2_320_7537 = new JCIblockVoteStars({\'progressId\':\'bx_vo_2_320_7537_progr\',\'ratingId\':\'bx_vo_2_320_7537_rating\',\'starsId\':\'bx_vo_2_320_7537_stars\',\'ajaxUrl\':\'/bitrix/components/bitrix/iblock.vote/component.php\',\'voteId\':\'320\'});
 
-	window.bx_vo_2_320_4875.ajaxParams = {\'SESSION_PARAMS\':\'31b7ecb348d351e36ae7cba4ca8cd8a0\',\'PAGE_PARAMS\':{\'ELEMENT_ID\':\'320\'},\'sessid\':\'15e5edef59b691eea645a2ec56d44c28\',\'AJAX_CALL\':\'Y\'};
-	window.bx_vo_2_320_4875.setValue("0");
-	window.bx_vo_2_320_4875.setVotes("0");
+	window.bx_vo_2_320_7537.ajaxParams = {\'SESSION_PARAMS\':\'31b7ecb348d351e36ae7cba4ca8cd8a0\',\'PAGE_PARAMS\':{\'ELEMENT_ID\':\'320\'},\'sessid\':\'a8ed91c999d4b5e38089dc00c521e547\',\'AJAX_CALL\':\'Y\'};
+	window.bx_vo_2_320_7537.setValue("0");
+	window.bx_vo_2_320_7537.setVotes("0");
 });
 </script><script type="text/javascript">
 BX.ready(
 	BX.defer(function(){
-		if (!!window.bx_vo_2_320_4875)
+		if (!!window.bx_vo_2_320_7537)
 		{
-			window.bx_vo_2_320_4875.bindEvents();
+			window.bx_vo_2_320_7537.bindEvents();
 		}
 	})
 );
 </script>
 	</div>
 <div class="item_price">
-	<div class="item_old_price" id="bx_385328537_320_old_price" style="display: none"></div>
-	<div class="item_current_price" id="bx_385328537_320_price"></div>
-	<div class="item_economy_price" id="bx_385328537_320_price_discount" style="display: none"></div>
+	<div class="item_old_price" id="bx_366100738_320_old_price" style="display: none"></div>
+	<div class="item_current_price" id="bx_366100738_320_price"></div>
+	<div class="item_economy_price" id="bx_366100738_320_price_discount" style="display: none"></div>
 </div>
 <div class="item_info_section">
 	<dl>
@@ -82,13 +82,13 @@ BX.ready(
 	<span class="item_section_name_gray">Количество</span>
 	<div class="item_buttons vam">
 		<span class="item_buttons_counter_block">
-			<a href="javascript:void(0)" class="bx_bt_button_type_2 bx_small bx_fwb" id="bx_385328537_320_quant_down">-</a>
-			<input id="bx_385328537_320_quantity" type="text" class="tac transparent_input" value="1">
-			<a href="javascript:void(0)" class="bx_bt_button_type_2 bx_small bx_fwb" id="bx_385328537_320_quant_up">+</a>
-			<span class="bx_cnt_desc" id="bx_385328537_320_quant_measure">шт</span>
+			<a href="javascript:void(0)" class="bx_bt_button_type_2 bx_small bx_fwb" id="bx_366100738_320_quant_down">-</a>
+			<input id="bx_366100738_320_quantity" type="text" class="tac transparent_input" value="1">
+			<a href="javascript:void(0)" class="bx_bt_button_type_2 bx_small bx_fwb" id="bx_366100738_320_quant_up">+</a>
+			<span class="bx_cnt_desc" id="bx_366100738_320_quant_measure">шт</span>
 		</span>
 		<span class="item_buttons_counter_block">
-			<a href="javascript:void(0);" class="bx_big bx_bt_button bx_cart" id="bx_385328537_320_buy_link"><span></span>Купить</a>
+			<a href="javascript:void(0);" class="bx_big bx_bt_button bx_cart" id="bx_366100738_320_buy_link"><span></span>Купить</a>
 		</span>
 	</div>
 </div>
@@ -113,7 +113,7 @@ BX.ready(
 	</div>
 	<div class="clb"></div>
 </div><script type="text/javascript">
-var obbx_385328537_320 = new JCCatalogElement({\'CONFIG\':{\'SHOW_QUANTITY\':true,\'SHOW_PRICE\':true,\'SHOW_DISCOUNT_PERCENT\':true,\'SHOW_OLD_PRICE\':true,\'DISPLAY_COMPARE\':false,\'MAIN_PICTURE_MODE\':\'IMG\'},\'VISUAL\':{\'ID\':\'bx_385328537_320\'},\'PRODUCT_TYPE\':\'1\',\'PRODUCT\':{\'ID\':\'320\',\'PICT\':{\'ID\':\'934\',\'SRC\':\'/upload/iblock/f91/f91868130d92df7dbbcf6b876693c014.jpg\',\'WIDTH\':\'1024\',\'HEIGHT\':\'768\'},\'NAME\':\'Слон обыкновенный\',\'SUBSCRIPTION\':true,\'PRICE\':false,\'SLIDER_COUNT\':\'3\',\'SLIDER\':[{\'ID\':\'934\',\'SRC\':\'/upload/iblock/f91/f91868130d92df7dbbcf6b876693c014.jpg\',\'WIDTH\':\'1024\',\'HEIGHT\':\'768\'},{\'ID\':\'935\',\'SRC\':\'/upload/iblock/20b/20b84ed88d8e6c51b7c883249a65f1a0.jpg\',\'WIDTH\':\'600\',\'HEIGHT\':\'450\'},{\'ID\':\'936\',\'SRC\':\'/upload/iblock/364/3647975fe8c883a009b1f22a4174b95b.jpg\',\'WIDTH\':\'850\',\'HEIGHT\':\'525\'}],\'CAN_BUY\':true,\'CHECK_QUANTITY\':false,\'QUANTITY_FLOAT\':false,\'MAX_QUANTITY\':\'3\',\'STEP_QUANTITY\':\'1\',\'BUY_URL\':\'/catalog/women/slon_obyknovennyy/?action=BUY&id=320\'},\'BASKET\':{\'ADD_PROPS\':true,\'QUANTITY\':\'quantity\',\'PROPS\':\'prop\',\'EMPTY_PROPS\':true,\'BASKET_URL\':\'/personal/cart/\'}});
+var obbx_366100738_320 = new JCCatalogElement({\'CONFIG\':{\'SHOW_QUANTITY\':true,\'SHOW_PRICE\':true,\'SHOW_DISCOUNT_PERCENT\':true,\'SHOW_OLD_PRICE\':true,\'DISPLAY_COMPARE\':false,\'MAIN_PICTURE_MODE\':\'IMG\'},\'VISUAL\':{\'ID\':\'bx_366100738_320\'},\'PRODUCT_TYPE\':\'1\',\'PRODUCT\':{\'ID\':\'320\',\'PICT\':{\'ID\':\'934\',\'SRC\':\'/upload/iblock/f91/f91868130d92df7dbbcf6b876693c014.jpg\',\'WIDTH\':\'1024\',\'HEIGHT\':\'768\'},\'NAME\':\'Слон обыкновенный\',\'SUBSCRIPTION\':true,\'PRICE\':false,\'SLIDER_COUNT\':\'3\',\'SLIDER\':[{\'ID\':\'934\',\'SRC\':\'/upload/iblock/f91/f91868130d92df7dbbcf6b876693c014.jpg\',\'WIDTH\':\'1024\',\'HEIGHT\':\'768\'},{\'ID\':\'935\',\'SRC\':\'/upload/iblock/20b/20b84ed88d8e6c51b7c883249a65f1a0.jpg\',\'WIDTH\':\'600\',\'HEIGHT\':\'450\'},{\'ID\':\'936\',\'SRC\':\'/upload/iblock/364/3647975fe8c883a009b1f22a4174b95b.jpg\',\'WIDTH\':\'850\',\'HEIGHT\':\'525\'}],\'CAN_BUY\':true,\'CHECK_QUANTITY\':false,\'QUANTITY_FLOAT\':false,\'MAX_QUANTITY\':\'3\',\'STEP_QUANTITY\':\'1\',\'BUY_URL\':\'/catalog/women/slon_obyknovennyy/?action=BUY&id=320\'},\'BASKET\':{\'ADD_PROPS\':true,\'QUANTITY\':\'quantity\',\'PROPS\':\'prop\',\'EMPTY_PROPS\':true,\'BASKET_URL\':\'/personal/cart/\'}});
 BX.message({
 	MESS_BTN_BUY: \'Купить\',
 	MESS_BTN_ADD_TO_BASKET: \'В корзину\',
@@ -128,6 +128,6 @@ BX.message({
 ";s:19:"~SEARCHABLE_CONTENT";s:10:"ЖЕНЩИНАМ
 ";s:4:"CODE";s:5:"women";s:5:"~CODE";s:5:"women";s:6:"XML_ID";N;s:7:"~XML_ID";N;s:6:"TMP_ID";N;s:7:"~TMP_ID";N;s:14:"DETAIL_PICTURE";N;s:15:"~DETAIL_PICTURE";N;s:15:"SOCNET_GROUP_ID";N;s:16:"~SOCNET_GROUP_ID";N;s:13:"LIST_PAGE_URL";s:9:"/catalog/";s:14:"~LIST_PAGE_URL";s:9:"/catalog/";s:16:"SECTION_PAGE_URL";s:15:"/catalog/women/";s:17:"~SECTION_PAGE_URL";s:15:"/catalog/women/";s:14:"IBLOCK_TYPE_ID";s:7:"catalog";s:15:"~IBLOCK_TYPE_ID";s:7:"catalog";s:11:"IBLOCK_CODE";s:7:"clothes";s:12:"~IBLOCK_CODE";s:7:"clothes";s:18:"IBLOCK_EXTERNAL_ID";s:10:"clothes_s1";s:19:"~IBLOCK_EXTERNAL_ID";s:10:"clothes_s1";s:11:"EXTERNAL_ID";N;s:12:"~EXTERNAL_ID";N;s:4:"PATH";a:1:{i:0;a:59:{s:2:"ID";s:2:"17";s:3:"~ID";s:2:"17";s:11:"TIMESTAMP_X";s:19:"2014-08-13 06:17:51";s:12:"~TIMESTAMP_X";s:19:"2014-08-13 06:17:51";s:11:"MODIFIED_BY";s:1:"1";s:12:"~MODIFIED_BY";s:1:"1";s:11:"DATE_CREATE";s:19:"2014-08-07 07:57:18";s:12:"~DATE_CREATE";s:19:"2014-08-07 07:57:18";s:10:"CREATED_BY";s:1:"1";s:11:"~CREATED_BY";s:1:"1";s:9:"IBLOCK_ID";s:1:"2";s:10:"~IBLOCK_ID";s:1:"2";s:17:"IBLOCK_SECTION_ID";N;s:18:"~IBLOCK_SECTION_ID";N;s:6:"ACTIVE";s:1:"Y";s:7:"~ACTIVE";s:1:"Y";s:13:"GLOBAL_ACTIVE";s:1:"Y";s:14:"~GLOBAL_ACTIVE";s:1:"Y";s:4:"SORT";s:3:"500";s:5:"~SORT";s:3:"500";s:4:"NAME";s:8:"Женщинам";s:5:"~NAME";s:8:"Женщинам";s:7:"PICTURE";N;s:8:"~PICTURE";N;s:11:"LEFT_MARGIN";s:1:"3";s:12:"~LEFT_MARGIN";s:1:"3";s:12:"RIGHT_MARGIN";s:1:"4";s:13:"~RIGHT_MARGIN";s:1:"4";s:11:"DEPTH_LEVEL";s:1:"1";s:12:"~DEPTH_LEVEL";s:1:"1";s:11:"DESCRIPTION";s:0:"";s:12:"~DESCRIPTION";s:0:"";s:16:"DESCRIPTION_TYPE";s:4:"text";s:17:"~DESCRIPTION_TYPE";s:4:"text";s:18:"SEARCHABLE_CONTENT";s:10:"ЖЕНЩИНАМ
 ";s:19:"~SEARCHABLE_CONTENT";s:10:"ЖЕНЩИНАМ
-";s:4:"CODE";s:5:"women";s:5:"~CODE";s:5:"women";s:6:"XML_ID";N;s:7:"~XML_ID";N;s:6:"TMP_ID";N;s:7:"~TMP_ID";N;s:14:"DETAIL_PICTURE";N;s:15:"~DETAIL_PICTURE";N;s:15:"SOCNET_GROUP_ID";N;s:16:"~SOCNET_GROUP_ID";N;s:13:"LIST_PAGE_URL";s:9:"/catalog/";s:14:"~LIST_PAGE_URL";s:9:"/catalog/";s:16:"SECTION_PAGE_URL";s:15:"/catalog/women/";s:17:"~SECTION_PAGE_URL";s:15:"/catalog/women/";s:14:"IBLOCK_TYPE_ID";s:7:"catalog";s:15:"~IBLOCK_TYPE_ID";s:7:"catalog";s:11:"IBLOCK_CODE";s:7:"clothes";s:12:"~IBLOCK_CODE";s:7:"clothes";s:18:"IBLOCK_EXTERNAL_ID";s:10:"clothes_s1";s:19:"~IBLOCK_EXTERNAL_ID";s:10:"clothes_s1";s:11:"EXTERNAL_ID";N;s:12:"~EXTERNAL_ID";N;s:16:"IPROPERTY_VALUES";a:12:{s:18:"ELEMENT_META_TITLE";s:36:"Каталог Женщинам от магазина Одежда+";s:21:"ELEMENT_META_KEYWORDS";s:102:"Женщинам, купить Женщинам, приобрести Женщинам, Женщинам в различных цветах, Женщинам от дистрибьютора";s:24:"ELEMENT_META_DESCRIPTION";s:143:"В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу Женщинам, представленный официальным дистрибьютором в России";s:33:"ELEMENT_DETAIL_PICTURE_FILE_TITLE";s:81:"картинка Женщинам магазин Одежда+ являющийся официальным дистрибьютором в России ";s:32:"ELEMENT_DETAIL_PICTURE_FILE_NAME";s:12:"zhenshchinam";s:31:"ELEMENT_DETAIL_PICTURE_FILE_ALT";s:37:"картинка Женщинам от магазина Одежда+";s:34:"ELEMENT_PREVIEW_PICTURE_FILE_TITLE";s:81:"картинка Женщинам магазин Одежда+ являющийся официальным дистрибьютором в России ";s:24:"SECTION_META_DESCRIPTION";s:143:"В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу Женщинам, представленный официальным дистрибьютором в России";s:32:"ELEMENT_PREVIEW_PICTURE_FILE_ALT";s:37:"картинка Женщинам от магазина Одежда+";s:21:"SECTION_META_KEYWORDS";s:102:"Женщинам, купить Женщинам, приобрести Женщинам, Женщинам в различных цветах, Женщинам от дистрибьютора";s:18:"SECTION_META_TITLE";s:52:"Каталог Женщинам от магазина &quot;Русский Шик&quot;";s:33:"ELEMENT_PREVIEW_PICTURE_FILE_NAME";s:12:"zhenshchinam";}}}}s:16:"IPROPERTY_VALUES";a:12:{s:18:"ELEMENT_META_TITLE";s:45:"Каталог Слон обыкновенный от магазина Одежда+";s:21:"ELEMENT_META_KEYWORDS";s:147:"Слон обыкновенный, купить Слон обыкновенный, приобрести Слон обыкновенный, Слон обыкновенный в различных цветах, Слон обыкновенный от дистрибьютора";s:24:"ELEMENT_META_DESCRIPTION";s:152:"В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу Слон обыкновенный, представленный официальным дистрибьютором в России";s:33:"ELEMENT_DETAIL_PICTURE_FILE_TITLE";s:90:"картинка Слон обыкновенный магазин Одежда+ являющийся официальным дистрибьютором в России ";s:32:"ELEMENT_DETAIL_PICTURE_FILE_NAME";s:17:"slon-obyknovennyy";s:31:"ELEMENT_DETAIL_PICTURE_FILE_ALT";s:46:"картинка Слон обыкновенный от магазина Одежда+";s:34:"ELEMENT_PREVIEW_PICTURE_FILE_TITLE";s:90:"картинка Слон обыкновенный магазин Одежда+ являющийся официальным дистрибьютором в России ";s:24:"SECTION_META_DESCRIPTION";s:152:"В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу Слон обыкновенный, представленный официальным дистрибьютором в России";s:32:"ELEMENT_PREVIEW_PICTURE_FILE_ALT";s:46:"картинка Слон обыкновенный от магазина Одежда+";s:21:"SECTION_META_KEYWORDS";s:147:"Слон обыкновенный, купить Слон обыкновенный, приобрести Слон обыкновенный, Слон обыкновенный в различных цветах, Слон обыкновенный от дистрибьютора";s:18:"SECTION_META_TITLE";s:61:"Каталог Слон обыкновенный от магазина &quot;Русский Шик&quot;";s:33:"ELEMENT_PREVIEW_PICTURE_FILE_NAME";s:17:"slon-obyknovennyy";}}s:18:"templateCachedData";a:6:{s:13:"additionalCSS";s:94:"/bitrix/components/bitrix/catalog/templates/.default/bitrix/catalog.element/.default/style.css";s:12:"additionalJS";s:94:"/bitrix/components/bitrix/catalog/templates/.default/bitrix/catalog.element/.default/script.js";s:16:"component_epilog";a:5:{s:10:"epilogFile";s:105:"/bitrix/components/bitrix/catalog/templates/.default/bitrix/catalog.element/.default/component_epilog.php";s:12:"templateName";s:8:".default";s:12:"templateFile";s:97:"/bitrix/components/bitrix/catalog/templates/.default/bitrix/catalog.element/.default/template.php";s:14:"templateFolder";s:84:"/bitrix/components/bitrix/catalog/templates/.default/bitrix/catalog.element/.default";s:12:"templateData";a:3:{s:14:"TEMPLATE_THEME";s:106:"/bitrix/components/bitrix/catalog/templates/.default/bitrix/catalog.element/.default/themes/wood/style.css";s:14:"TEMPLATE_CLASS";s:7:"bx_wood";s:6:"JS_OBJ";s:18:"obbx_385328537_320";}}s:14:"__children_css";a:2:{i:0;s:63:"/bitrix/components/bitrix/iblock.vote/templates/stars/style.css";i:1;s:73:"/bitrix/components/bitrix/catalog.brandblock/templates/.default/style.css";}s:13:"__children_js";a:2:{i:0;s:63:"/bitrix/components/bitrix/iblock.vote/templates/stars/script.js";i:1;s:73:"/bitrix/components/bitrix/catalog.brandblock/templates/.default/script.js";}s:18:"__children_epilogs";a:1:{i:0;a:5:{s:10:"epilogFile";s:74:"/bitrix/components/bitrix/iblock.vote/templates/stars/component_epilog.php";s:12:"templateName";s:5:"stars";s:12:"templateFile";s:66:"/bitrix/components/bitrix/iblock.vote/templates/stars/template.php";s:14:"templateFolder";s:53:"/bitrix/components/bitrix/iblock.vote/templates/stars";s:12:"templateData";a:2:{s:6:"JS_OBJ";s:16:"bx_vo_2_320_4875";s:10:"ELEMENT_ID";i:320;}}}}}}';
+";s:4:"CODE";s:5:"women";s:5:"~CODE";s:5:"women";s:6:"XML_ID";N;s:7:"~XML_ID";N;s:6:"TMP_ID";N;s:7:"~TMP_ID";N;s:14:"DETAIL_PICTURE";N;s:15:"~DETAIL_PICTURE";N;s:15:"SOCNET_GROUP_ID";N;s:16:"~SOCNET_GROUP_ID";N;s:13:"LIST_PAGE_URL";s:9:"/catalog/";s:14:"~LIST_PAGE_URL";s:9:"/catalog/";s:16:"SECTION_PAGE_URL";s:15:"/catalog/women/";s:17:"~SECTION_PAGE_URL";s:15:"/catalog/women/";s:14:"IBLOCK_TYPE_ID";s:7:"catalog";s:15:"~IBLOCK_TYPE_ID";s:7:"catalog";s:11:"IBLOCK_CODE";s:7:"clothes";s:12:"~IBLOCK_CODE";s:7:"clothes";s:18:"IBLOCK_EXTERNAL_ID";s:10:"clothes_s1";s:19:"~IBLOCK_EXTERNAL_ID";s:10:"clothes_s1";s:11:"EXTERNAL_ID";N;s:12:"~EXTERNAL_ID";N;s:16:"IPROPERTY_VALUES";a:12:{s:18:"ELEMENT_META_TITLE";s:36:"Каталог Женщинам от магазина Одежда+";s:21:"ELEMENT_META_KEYWORDS";s:102:"Женщинам, купить Женщинам, приобрести Женщинам, Женщинам в различных цветах, Женщинам от дистрибьютора";s:24:"ELEMENT_META_DESCRIPTION";s:143:"В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу Женщинам, представленный официальным дистрибьютором в России";s:33:"ELEMENT_DETAIL_PICTURE_FILE_TITLE";s:81:"картинка Женщинам магазин Одежда+ являющийся официальным дистрибьютором в России ";s:32:"ELEMENT_DETAIL_PICTURE_FILE_NAME";s:12:"zhenshchinam";s:31:"ELEMENT_DETAIL_PICTURE_FILE_ALT";s:37:"картинка Женщинам от магазина Одежда+";s:34:"ELEMENT_PREVIEW_PICTURE_FILE_TITLE";s:81:"картинка Женщинам магазин Одежда+ являющийся официальным дистрибьютором в России ";s:24:"SECTION_META_DESCRIPTION";s:143:"В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу Женщинам, представленный официальным дистрибьютором в России";s:32:"ELEMENT_PREVIEW_PICTURE_FILE_ALT";s:37:"картинка Женщинам от магазина Одежда+";s:21:"SECTION_META_KEYWORDS";s:102:"Женщинам, купить Женщинам, приобрести Женщинам, Женщинам в различных цветах, Женщинам от дистрибьютора";s:18:"SECTION_META_TITLE";s:52:"Каталог Женщинам от магазина &quot;Русский Шик&quot;";s:33:"ELEMENT_PREVIEW_PICTURE_FILE_NAME";s:12:"zhenshchinam";}}}}s:16:"IPROPERTY_VALUES";a:12:{s:18:"ELEMENT_META_TITLE";s:45:"Каталог Слон обыкновенный от магазина Одежда+";s:21:"ELEMENT_META_KEYWORDS";s:147:"Слон обыкновенный, купить Слон обыкновенный, приобрести Слон обыкновенный, Слон обыкновенный в различных цветах, Слон обыкновенный от дистрибьютора";s:24:"ELEMENT_META_DESCRIPTION";s:152:"В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу Слон обыкновенный, представленный официальным дистрибьютором в России";s:33:"ELEMENT_DETAIL_PICTURE_FILE_TITLE";s:90:"картинка Слон обыкновенный магазин Одежда+ являющийся официальным дистрибьютором в России ";s:32:"ELEMENT_DETAIL_PICTURE_FILE_NAME";s:17:"slon-obyknovennyy";s:31:"ELEMENT_DETAIL_PICTURE_FILE_ALT";s:46:"картинка Слон обыкновенный от магазина Одежда+";s:34:"ELEMENT_PREVIEW_PICTURE_FILE_TITLE";s:90:"картинка Слон обыкновенный магазин Одежда+ являющийся официальным дистрибьютором в России ";s:24:"SECTION_META_DESCRIPTION";s:152:"В магазине Одежда+ собран огромный каталог, где не последняя роль отведена разделу Слон обыкновенный, представленный официальным дистрибьютором в России";s:32:"ELEMENT_PREVIEW_PICTURE_FILE_ALT";s:46:"картинка Слон обыкновенный от магазина Одежда+";s:21:"SECTION_META_KEYWORDS";s:147:"Слон обыкновенный, купить Слон обыкновенный, приобрести Слон обыкновенный, Слон обыкновенный в различных цветах, Слон обыкновенный от дистрибьютора";s:18:"SECTION_META_TITLE";s:61:"Каталог Слон обыкновенный от магазина &quot;Русский Шик&quot;";s:33:"ELEMENT_PREVIEW_PICTURE_FILE_NAME";s:17:"slon-obyknovennyy";}}s:18:"templateCachedData";a:6:{s:13:"additionalCSS";s:95:"/bitrix/templates/shik/components/bitrix/catalog/shik/bitrix/catalog.element/.default/style.css";s:12:"additionalJS";s:95:"/bitrix/templates/shik/components/bitrix/catalog/shik/bitrix/catalog.element/.default/script.js";s:16:"component_epilog";a:5:{s:10:"epilogFile";s:106:"/bitrix/templates/shik/components/bitrix/catalog/shik/bitrix/catalog.element/.default/component_epilog.php";s:12:"templateName";s:8:".default";s:12:"templateFile";s:98:"/bitrix/templates/shik/components/bitrix/catalog/shik/bitrix/catalog.element/.default/template.php";s:14:"templateFolder";s:85:"/bitrix/templates/shik/components/bitrix/catalog/shik/bitrix/catalog.element/.default";s:12:"templateData";a:3:{s:14:"TEMPLATE_THEME";s:107:"/bitrix/templates/shik/components/bitrix/catalog/shik/bitrix/catalog.element/.default/themes/wood/style.css";s:14:"TEMPLATE_CLASS";s:7:"bx_wood";s:6:"JS_OBJ";s:18:"obbx_366100738_320";}}s:14:"__children_css";a:2:{i:0;s:63:"/bitrix/components/bitrix/iblock.vote/templates/stars/style.css";i:1;s:73:"/bitrix/components/bitrix/catalog.brandblock/templates/.default/style.css";}s:13:"__children_js";a:2:{i:0;s:63:"/bitrix/components/bitrix/iblock.vote/templates/stars/script.js";i:1;s:73:"/bitrix/components/bitrix/catalog.brandblock/templates/.default/script.js";}s:18:"__children_epilogs";a:1:{i:0;a:5:{s:10:"epilogFile";s:74:"/bitrix/components/bitrix/iblock.vote/templates/stars/component_epilog.php";s:12:"templateName";s:5:"stars";s:12:"templateFile";s:66:"/bitrix/components/bitrix/iblock.vote/templates/stars/template.php";s:14:"templateFolder";s:53:"/bitrix/components/bitrix/iblock.vote/templates/stars";s:12:"templateData";a:2:{s:6:"JS_OBJ";s:16:"bx_vo_2_320_7537";s:10:"ELEMENT_ID";i:320;}}}}}}';
 return true;
 ?>

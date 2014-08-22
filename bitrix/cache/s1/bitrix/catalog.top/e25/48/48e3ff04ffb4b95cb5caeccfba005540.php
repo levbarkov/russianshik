@@ -1,10 +1,10 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001408600705';
-$dateexpire = '001408600885';
-$ser_content = 'a:2:{s:7:"CONTENT";s:9712:"<div id="cat_top_cont_604592" class="bx_catalog_tile_home_type_2 col4 bx_wood">
+$datecreate = '001408691856';
+$dateexpire = '001408692036';
+$ser_content = 'a:2:{s:7:"CONTENT";s:9712:"<div id="cat_top_cont_694896" class="bx_catalog_tile_home_type_2 col4 bx_wood">
 <div class="bx_catalog_tile_section">
-<div id="cat-top-0_312120" class="bx_catalog_tile_slide active">
+<div id="cat-top-0_956717" class="bx_catalog_tile_slide active">
 	<div class="bx_catalog_item double"><div class="bx_catalog_item_container" id="bx_1210313393_320">
 		<a id="bx_1210313393_320_pict"
 			href="/catalog/women/slon_obyknovennyy/"

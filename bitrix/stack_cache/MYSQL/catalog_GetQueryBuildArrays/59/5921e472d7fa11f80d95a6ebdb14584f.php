@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001408600729';
-$dateexpire = '001408611529';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:2:{s:8:"P_2_1_ru";a:1:{i:0;a:4:{s:2:"ID";s:1:"1";s:18:"CATALOG_GROUP_NAME";s:14:"Розничная цена";s:18:"CATALOG_CAN_ACCESS";s:1:"Y";s:15:"CATALOG_CAN_BUY";s:1:"Y";}}s:14:"P_1,2,3,4_1_ru";a:1:{i:0;a:4:{s:2:"ID";s:1:"1";s:18:"CATALOG_GROUP_NAME";s:14:"Розничная цена";s:18:"CATALOG_CAN_ACCESS";s:1:"Y";s:15:"CATALOG_CAN_BUY";s:1:"Y";}}}}';
+$datecreate = '001408706236';
+$dateexpire = '001408717036';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:14:"P_1,2,3,4_1_ru";a:1:{i:0;a:4:{s:2:"ID";s:1:"1";s:18:"CATALOG_GROUP_NAME";s:14:"Розничная цена";s:18:"CATALOG_CAN_ACCESS";s:1:"Y";s:15:"CATALOG_CAN_BUY";s:1:"Y";}}}}';
 return true;
 ?>
