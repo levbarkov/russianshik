@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/shik/components/bitrix/catalog.top/shik/slider/script.js" => "140869585938483",), 'CUR_SEL_CNT' => '0', 'CUR_IE_CNT' => '0'); ?>

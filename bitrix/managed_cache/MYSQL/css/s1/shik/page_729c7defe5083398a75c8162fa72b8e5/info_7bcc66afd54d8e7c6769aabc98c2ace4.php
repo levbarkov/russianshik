@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/shik/components/bitrix/system.pagenavigation/arrows/style.css" => "14084432684092","/bitrix/templates/shik/components/bitrix/catalog.top/shik/slider/style.css" => "140869585927599",), 'CUR_SEL_CNT' => '269', 'CUR_IE_CNT' => '0'); ?>
