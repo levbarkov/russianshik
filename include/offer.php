@@ -13,7 +13,7 @@
 </div>
 <div class="col-xs-5">
     <div class="individual-coat__img-wrapper">
-        <img class="individual-coat__img" src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/img/individual-coat-bg.jpg')?>" alt=""/>
+        <img class="individual-coat__img" src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/dist/img/individual-coat-bg.jpg')?>" alt=""/>
     </div>
 </div>
 </div>
