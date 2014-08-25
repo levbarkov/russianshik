@@ -13,18 +13,12 @@ $curPage = $APPLICATION->GetCurPage(true);
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_DIR?>/favicon.ico" />
-	<?//$APPLICATION->ShowHead();
+	<?$APPLICATION->ShowHead();
 	echo '<meta http-equiv="Content-Type" content="text/html; charset='.LANG_CHARSET.'"'.(true ? ' /':'').'>'."\n";
 	$APPLICATION->ShowMeta("robots", false, true);
 	$APPLICATION->ShowMeta("keywords", false, true);
 	$APPLICATION->ShowMeta("description", false, true);
 	$APPLICATION->ShowCSS(true, true);
-	?>
-	<link rel="stylesheet" type="text/css" href="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH."/colors.css")?>" />
-	<?
-	$APPLICATION->ShowHeadStrings();
-	$APPLICATION->ShowHeadScripts();
-	// $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/script.js");
 	?>
 	<title><?$APPLICATION->ShowTitle()?></title>
 	
@@ -39,6 +33,7 @@ $curPage = $APPLICATION->GetCurPage(true);
     <script src="<?=SITE_TEMPLATE_PATH.'/bower_components/html5shiv/dist/html5shiv.min.js'?>"></script>
     <![endif]-->
 	<?php if (CSite::InDir(SITE_DIR.'index.php'))	$isFrontPage = true; ?>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow:400,700|PT+Serif:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 

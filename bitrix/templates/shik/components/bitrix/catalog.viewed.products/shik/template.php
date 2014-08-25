@@ -22,11 +22,15 @@ if (!empty($arResult['ITEMS']))
 	<?
 	foreach ($arResult['ITEMS'] as $key => $arItem):
 	?>
-		<div class="col-xs-3">
-            <a class="searched__link-on-model" href="<?php echo $arItem['DETAIL_PAGE_URL']; ?>">
-                <img class="seached__img" src="<?php echo $arItem['DETAIL_PICTURE']['SRC']; ?>" alt="#"/>
-                <span class="searched__new-alert">new</span>
-            </a>
+		<div class="col-xs-3 searched__item">
+			<div class="searched__item-photo">
+				<a class="searched__item-photo-link" href="<?php echo $arItem['DETAIL_PAGE_URL']; ?>">
+					<div class="searched__item-photo-img-wrapper">
+						<img class="searched__item-photo-img" src="<?php echo $arItem['DETAIL_PICTURE']['SRC']; ?>" alt="#"/>
+						<span class="searched__item-new-alert">new</span>
+					</div>
+				</a>
+			</div>
             <a class="searched__model"><?php echo $arItem['NAME']; ?></a>
             <p class="searched__price"><?php echo $arItem['CATALOG_PRICE_1']; ?> руб.</p>
         </div>

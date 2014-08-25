@@ -19,4 +19,4 @@ $APPLICATION->IncludeComponent("bitrix:main.map", ".default", array(
 	false
 );
 
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>ОЩИБКА 404. Такой страницы не существует.

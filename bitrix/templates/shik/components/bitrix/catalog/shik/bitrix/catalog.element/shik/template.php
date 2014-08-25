@@ -11,58 +11,6 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-$templateData = array(
-	'TEMPLATE_THEME' => $this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].'/style.css',
-	'TEMPLATE_CLASS' => 'bx_'.$arParams['TEMPLATE_THEME']
-);
-
-$strMainID = $this->GetEditAreaId($arResult['ID']);
-$arItemIDs = array(
-	'ID' => $strMainID,
-	'PICT' => $strMainID.'_pict',
-	'DISCOUNT_PICT_ID' => $strMainID.'_dsc_pict',
-	'STICKER_ID' => $strMainID.'_sticker',
-	'BIG_SLIDER_ID' => $strMainID.'_big_slider',
-	'BIG_IMG_CONT_ID' => $strMainID.'_bigimg_cont',
-	'SLIDER_CONT_ID' => $strMainID.'_slider_cont',
-	'SLIDER_LIST' => $strMainID.'_slider_list',
-	'SLIDER_LEFT' => $strMainID.'_slider_left',
-	'SLIDER_RIGHT' => $strMainID.'_slider_right',
-	'OLD_PRICE' => $strMainID.'_old_price',
-	'PRICE' => $strMainID.'_price',
-	'DISCOUNT_PRICE' => $strMainID.'_price_discount',
-	'SLIDER_CONT_OF_ID' => $strMainID.'_slider_cont_',
-	'SLIDER_LIST_OF_ID' => $strMainID.'_slider_list_',
-	'SLIDER_LEFT_OF_ID' => $strMainID.'_slider_left_',
-	'SLIDER_RIGHT_OF_ID' => $strMainID.'_slider_right_',
-	'QUANTITY' => $strMainID.'_quantity',
-	'QUANTITY_DOWN' => $strMainID.'_quant_down',
-	'QUANTITY_UP' => $strMainID.'_quant_up',
-	'QUANTITY_MEASURE' => $strMainID.'_quant_measure',
-	'QUANTITY_LIMIT' => $strMainID.'_quant_limit',
-	'BUY_LINK' => $strMainID.'_buy_link',
-	'ADD_BASKET_LINK' => $strMainID.'_add_basket_link',
-	'COMPARE_LINK' => $strMainID.'_compare_link',
-	'PROP' => $strMainID.'_prop_',
-	'PROP_DIV' => $strMainID.'_skudiv',
-	'DISPLAY_PROP_DIV' => $strMainID.'_sku_prop',
-	'OFFER_GROUP' => $strMainID.'_set_group_',
-	'BASKET_PROP_DIV' => $strMainID.'_basket_prop',
-);
-$strObName = 'ob'.preg_replace("/[^a-zA-Z0-9_]/", "x", $strMainID);
-$templateData['JS_OBJ'] = $strObName;
-
-$strTitle = (
-	isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_TITLE"]) && '' != $arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_TITLE"]
-	? $arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_TITLE"]
-	: $arResult['NAME']
-);
-$strAlt = (
-	isset($arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]) && '' != $arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]
-	? $arResult["IPROPERTY_VALUES"]["ELEMENT_DETAIL_PICTURE_FILE_ALT"]
-	: $arResult['NAME']
-);
 ?>
 <section class="goods">
     <div class="row">
@@ -78,7 +26,12 @@ $strAlt = (
                 </div>
                 <div class="goods__photo-small">
                     <div class="row">
-						<?php foreach($arResult['MORE_PHOTO'] as $photo): ?>
+						<?php 
+						$i = 0;
+						foreach($arResult['MORE_PHOTO'] as $photo): 
+							
+							if ($i < 2):
+						?>
 							<div class="col-xs-6 goods__photo-small-left">
 								<a class="goods__photo-small-link" href="#">
 									<div class="goods__photo-small-img-wrapper">
@@ -86,7 +39,11 @@ $strAlt = (
 									</div>
 								</a>
 							</div>
-						<?php endforeach; ?>
+						<?php 
+							$i++;
+							endif;
+						endforeach; 
+						?>
                     </div>
                 </div>
             </div>
@@ -139,18 +96,23 @@ $strAlt = (
 				<!-- размер -->
                 <div class="col-xs-12 goods sizes">
                     <div class="goods__size">
-                        <p class="goods__size-text"><?php echo GetMessage("CATALOG_SIZE");?>:</p>
+                        <p class="goods__size-text" itemprop="height"><?php echo GetMessage("CATALOG_SIZE");?>:</p>
                         <a class="goods__size-about" href="#">Как выбрать размер?</a>
                         <ul class="goods__list">
-							<?php foreach($arResult['PROPERTIES']['SIZE']['VALUE'] as $size): 
-								$size = explode(' ', $size);
+							<?php 
+							$i=0;
+							foreach($arResult['PROPERTIES']['SIZE']['VALUE'] as $size): 
+							$size = explode(' ', $size);
 							?>
 								
                             <li class="goods__list-item">
-                                <input class="goods__list-item-chk" checked type="radio" name="size" id="size"/>
-                                <label class="goods__list-item-chk-size" for="size"><b><?php echo $size[0];?></b> <?php echo $size[1];?></label>
+                                <input class="goods__list-item-chk" checked type="radio" name="size" id="size<? echo (($i!=0)? ($i) : '');?>"/>
+                                <label class="goods__list-item-chk-size" for="size<? echo (($i!=0)? ($i) : '');?>"><b><?php echo $size[0];?></b> <?php echo $size[1];?></label>
                             </li>
-							<?php endforeach; ?>
+							<?php
+							$i++;
+							endforeach; 
+							?>
                         </ul>
                     </div>
                 </div>
@@ -167,12 +129,19 @@ $strAlt = (
                         <span><a class="goods__amount-box-plus" href="#"></a></span>
                     </div>
                 </div>
+				<!-- количество конец -->
+				
+				<!-- наличие -->
                 <div class="col-xs-12 goods buttons">
                     <a class="btn btn-default goods__buy" href="#"><?php echo GetMessage("CATALOG_BUY_IN_ONE_CLICK");?></a>
-                    <a class="goods__available"><?php echo GetMessage("CATALOG_GOODS_IN_STOCK");?></a>
-                    <a class="goods__adress" href="#">Адрес магазина</a>
+					<?php if ($arResult['CATALOG_QUANTITY'] == 0): ?>
+						<a class="goods__available"><?php echo GetMessage("CATALOG_ORDER");?></a>
+					<?php else: ?>
+						<a class="goods__available"><?php echo GetMessage("CATALOG_GOODS_IN_STOCK");?></a>
+					<?php endif; ?>
+                    <a class="goods__adress" href="/about/contacts/"><?php echo GetMessage("CATALOG_SHOP_ADSRESS");?></a>
                 </div>
-				<!-- количество конец -->
+				<!-- наличие конец -->
 				
 				<!-- описание -->
                 <div class="col-xs-12 goods__about">

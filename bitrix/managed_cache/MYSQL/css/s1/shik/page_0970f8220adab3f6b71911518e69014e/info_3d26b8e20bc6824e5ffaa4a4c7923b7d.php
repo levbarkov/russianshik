@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/shik/components/bitrix/main.feedback/eshop_adapt/style.css" => "14084432685366",), 'CUR_SEL_CNT' => '14', 'CUR_IE_CNT' => '0'); ?>

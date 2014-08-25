@@ -1,0 +1,12 @@
+
+/* Start:/bitrix/templates/shik/components/bitrix/news.list/shik_list/style.css*/
+div.news-list img.preview_picture
+{
+	float:left;
+	margin:0 4px 6px 0;
+}
+.news-date-time {
+	color:#486DAA;
+}
+
+/* End */

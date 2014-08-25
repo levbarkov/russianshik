@@ -13,9 +13,9 @@ $arUrlRewrite = array(
 		"PATH" => "/catalog/women/index.php",
 	),
 	array(
-		"CONDITION" => "#^tailor_tips#",
+		"CONDITION" => "/#^tailor_tips#/",
 		"RULE" => "",
-		"ID" => "bitrix:iblock.element.add.list",
+		"ID" => "bitrix:news",
 		"PATH" => "/tailor_tips/index.php",
 	),
 	array(
@@ -35,12 +35,6 @@ $arUrlRewrite = array(
 		"RULE" => "",
 		"ID" => "bitrix:news",
 		"PATH" => "/news/index.php",
-	),
-	array(
-		"CONDITION" => "#^#",
-		"RULE" => "",
-		"ID" => "bitrix:iblock.element.add.list",
-		"PATH" => "/catalog/tailor_tips/index.php",
 	),
 );
 

@@ -73,6 +73,16 @@
 					);
 				?>
             </div>
+			<div class="col-xs-3">
+                <p class="footer__about-title">
+                    <?$APPLICATION->IncludeFile(SITE_DIR."/include/copyright.php", Array(), Array("MODE" => "html", "NAME" => GetMessage("COPYRIGHT"),));?>
+                </p>
+                
+                <?$APPLICATION->IncludeFile(SITE_DIR."/include/telephone_footer.php", Array(), Array("MODE" => "html", "NAME" => GetMessage("TELEPHONE_FOOTER"),));?>
+                
+				<?$APPLICATION->IncludeFile(SITE_DIR."/include/about_developers.php", Array(), Array("MODE" => "html", "NAME" => GetMessage("TELEPHONE_FOOTER"),));?>
+
+            </div>
         </div>
     </div>
 </div>
