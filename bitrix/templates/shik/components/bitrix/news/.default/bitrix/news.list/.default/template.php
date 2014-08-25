@@ -4,7 +4,7 @@
 if (count($arResult["ITEMS"]) < 1)
 	return;
 ?>
-111111111111111111
+
 <ul class="bx_news">
 
 <?foreach($arResult["ITEMS"] as $arItem):?>

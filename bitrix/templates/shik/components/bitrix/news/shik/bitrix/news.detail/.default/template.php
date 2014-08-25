@@ -1,5 +1,5 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-22222222222222
+
 <div class="bx_news_detail">
     <?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
     <h2><?=$arResult["NAME"]?></h2>

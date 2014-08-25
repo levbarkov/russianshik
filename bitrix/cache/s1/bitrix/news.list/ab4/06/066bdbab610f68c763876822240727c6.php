@@ -1,9 +1,9 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001408974145';
-$dateexpire = '001444974145';
-$ser_content = 'a:2:{s:7:"CONTENT";s:592:"
-111111111111111111
+$datecreate = '001408974393';
+$dateexpire = '001444974393';
+$ser_content = 'a:2:{s:7:"CONTENT";s:574:"
+
 <ul class="bx_news">
 
 	<li id="bx_719294866_324">
