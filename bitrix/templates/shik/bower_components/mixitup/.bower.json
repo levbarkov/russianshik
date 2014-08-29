@@ -13,5 +13,6 @@
   },
   "_source": "git://github.com/barrel/mixitup.git",
   "_target": "~2.1.6",
-  "_originalSource": "mixitup"
+  "_originalSource": "mixitup",
+  "_direct": true
 }

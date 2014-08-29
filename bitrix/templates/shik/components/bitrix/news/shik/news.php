@@ -38,6 +38,7 @@
 ?>
 <br />
 <?endif*/?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",

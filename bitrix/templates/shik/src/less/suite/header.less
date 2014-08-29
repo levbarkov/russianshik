@@ -1,0 +1,86 @@
+.header {
+  &__logo {
+    text-align: center;
+    &-img {
+      margin-bottom: -15px;
+    }
+    &-text {
+      color: #3e2505; // text color
+      font-family: "PT Sans", sans-serif;
+      font-size: 13px;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      margin: 0px;
+      &:after, &:before {
+        position: absolute;
+        content: ' ';
+        height: 2px;
+        width: 9px;
+        background: url(/dist/img/logo-text-lines.jpg);
+        top: 7px;
+      }
+      &:after {
+        right: -29px;
+      }
+      &:before {
+        left: -29px;
+      }
+    }
+    &-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      height: 140px;
+    }
+  }
+  &__menu {
+    &-list {
+      padding-left: 0px;
+      margin-bottom: 0px;
+      list-style: none;
+      &-item {
+
+        &-link {
+          color: #c57300; // text color
+          font-family: "PT Sans", sans-serif;
+          font-size: 14px;
+          text-decoration: underline;
+          &:hover {
+            color: #c57300; // text color
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      height: 140px;
+    }
+  }
+  &__phone {
+    &-link {
+      color: #5e240c; // text color
+      font-family: "PT Sans", sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      position: relative;
+      &:hover {
+        color: #5e240c; // text color
+      }
+    }
+    &-icon {
+      margin-left: -25px;
+    }
+    &-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: right;
+      height: 140px;
+      &-container {
+        display: table;
+        width: 100%;
+      }
+    }
+  }
+}

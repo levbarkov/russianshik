@@ -16,139 +16,153 @@ if (!$arParams['FILTER_VIEW_MODE'])
 	$arParams['FILTER_VIEW_MODE'] = 'VERTICAL';
 $arParams['USE_FILTER'] = (isset($arParams['USE_FILTER']) && $arParams['USE_FILTER'] == 'Y' ? 'Y' : 'N');
 $verticalGrid = ('Y' == $arParams['USE_FILTER'] && $arParams["FILTER_VIEW_MODE"] == "VERTICAL");
+?>
+<pre>
+<?php //print_r($arResult); ?>
+</pre>
 
-if ($verticalGrid)
-{
-	?><div class="workarea grid2x1"><?
-}
-if ($arParams['USE_FILTER'] == 'Y')
-{
+<!-- каталог товаров -->	
+<section class="catalog" ng-app="app">
+<div class="row">
 
-	$arFilter = array(
-		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-		"ACTIVE" => "Y",
-		"GLOBAL_ACTIVE" => "Y",
-	);
-	if (0 < intval($arResult["VARIABLES"]["SECTION_ID"]))
-	{
-		$arFilter["ID"] = $arResult["VARIABLES"]["SECTION_ID"];
-	}
-	elseif ('' != $arResult["VARIABLES"]["SECTION_CODE"])
-	{
-		$arFilter["=CODE"] = $arResult["VARIABLES"]["SECTION_CODE"];
-	}
+<div class="col-xs-12">
+    <h1 class="catalog__title">Примеp длиного названия/заголовка</h1>
+</div>
+<div class="col-xs-3 ">
+    <h3 class="filtr__left-amount">Всего позиций</h3>
 
-	$obCache = new CPHPCache();
-	if ($obCache->InitCache(36000, serialize($arFilter), "/iblock/catalog"))
-	{
-		$arCurSection = $obCache->GetVars();
-	}
-	elseif ($obCache->StartDataCache())
-	{
-		$arCurSection = array();
-		if (\Bitrix\Main\Loader::includeModule("iblock"))
-		{
-			$dbRes = CIBlockSection::GetList(array(), $arFilter, false, array("ID"));
+    <div class="filtr__left">
+		<?
+			$APPLICATION->IncludeComponent(
+			"shik:catalog.smart.filter",
+			"shik",
+			Array(
+				"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+				"IBLOCK_ID" => $arParams["IBLOCK_ID"],
+				"SECTION_ID" => $arCurSection['ID'],
+				"FILTER_NAME" => $arParams["FILTER_NAME"],
+				"PRICE_CODE" => $arParams["PRICE_CODE"],
+				"CACHE_TYPE" => $arParams["CACHE_TYPE"],
+				"CACHE_TIME" => $arParams["CACHE_TIME"],
+				"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+				"SAVE_IN_SESSION" => "N",
+				"XML_EXPORT" => "Y",
+				"SECTION_TITLE" => "NAME",
+				"SECTION_DESCRIPTION" => "DESCRIPTION",
+				'HIDE_NOT_AVAILABLE' => $arParams["HIDE_NOT_AVAILABLE"],
+				"TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"]
+			),
+			$component,
+			array('HIDE_ICONS' => 'Y')
+			);
+		?>
+    </div>
+    <SCRIPT src="<?=SITE_TEMPLATE_PATH.'/bower_components/chosen_v1.1.0/chosen.jquery.js';?>"></SCRIPT>
 
-			if(defined("BX_COMP_MANAGED_CACHE"))
-			{
-				global $CACHE_MANAGER;
-				$CACHE_MANAGER->StartTagCache("/iblock/catalog");
-
-				if ($arCurSection = $dbRes->Fetch())
-				{
-					$CACHE_MANAGER->RegisterTag("iblock_id_".$arParams["IBLOCK_ID"]);
-				}
-				$CACHE_MANAGER->EndTagCache();
-			}
-			else
-			{
-				if(!$arCurSection = $dbRes->Fetch())
-					$arCurSection = array();
-			}
-		}
-		$obCache->EndDataCache($arCurSection);
-	}
-	if (!isset($arCurSection))
-	{
-		$arCurSection = array();
-	}
-	if ($verticalGrid)
-	{
-		?><div class="bx_sidebar"><?
-	}
-	?><?$APPLICATION->IncludeComponent(
-		"bitrix:catalog.smart.filter",
-		"visual_".($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL" ? "horizontal" : "vertical"),
-		Array(
-			"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-			"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-			"SECTION_ID" => $arCurSection['ID'],
-			"FILTER_NAME" => $arParams["FILTER_NAME"],
-			"PRICE_CODE" => $arParams["PRICE_CODE"],
-			"CACHE_TYPE" => $arParams["CACHE_TYPE"],
-			"CACHE_TIME" => $arParams["CACHE_TIME"],
-			"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
-			"SAVE_IN_SESSION" => "N",
-			"XML_EXPORT" => "Y",
-			"SECTION_TITLE" => "NAME",
-			"SECTION_DESCRIPTION" => "DESCRIPTION",
-			'HIDE_NOT_AVAILABLE' => $arParams["HIDE_NOT_AVAILABLE"],
-			"TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"]
-		),
-		$component,
-		array('HIDE_ICONS' => 'Y')
-	);?><?
-	if ($verticalGrid)
-	{
-		?></div><?
-	}
-}
-if ($verticalGrid)
-{
-	?><div class="bx_content_section"><?
-}
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"",
-	array(
-		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-		"SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
-		"SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
-		"CACHE_TYPE" => $arParams["CACHE_TYPE"],
-		"CACHE_TIME" => $arParams["CACHE_TIME"],
-		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
-		"COUNT_ELEMENTS" => $arParams["SECTION_COUNT_ELEMENTS"],
-		"TOP_DEPTH" => $arParams["SECTION_TOP_DEPTH"],
-		"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
-		"VIEW_MODE" => $arParams["SECTIONS_VIEW_MODE"],
-		"SHOW_PARENT_NAME" => $arParams["SECTIONS_SHOW_PARENT_NAME"],
-		"HIDE_SECTION_NAME" => (isset($arParams["SECTIONS_HIDE_SECTION_NAME"]) ? $arParams["SECTIONS_HIDE_SECTION_NAME"] : "N"),
-		"ADD_SECTIONS_CHAIN" => (isset($arParams["ADD_SECTIONS_CHAIN"]) ? $arParams["ADD_SECTIONS_CHAIN"] : '')
+	<!-- советы портного -->
+    <div class="tips ">
+        <?
+$APPLICATION->IncludeComponent("bitrix:news.list", "shik_mainpage", Array(
+	"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
+	"IBLOCK_ID" => "7",	// Код информационного блока
+	"NEWS_COUNT" => "3",	// Количество новостей на странице
+	"SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+	"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+	"SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+	"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+	"FILTER_NAME" => "",	// Фильтр
+	"FIELD_CODE" => array(	// Поля
+		0 => "",
+		1 => "",
 	),
-	$component
-);?><?
-if($arParams["USE_COMPARE"]=="Y")
-{
-	?><?$APPLICATION->IncludeComponent(
-		"bitrix:catalog.compare.list",
-		"",
-		array(
-			"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-			"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-			"NAME" => $arParams["COMPARE_NAME"],
-			"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
-			"COMPARE_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["compare"],
-		),
-		$component
-	);?><?
-}
+	"PROPERTY_CODE" => array(	// Свойства
+		0 => "",
+		1 => "",
+	),
+	"CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+	"DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+	"AJAX_MODE" => "N",	// Включить режим AJAX
+	"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+	"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+	"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+	"CACHE_TYPE" => "A",	// Тип кеширования
+	"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+	"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+	"CACHE_GROUPS" => "N",	// Учитывать права доступа
+	"PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+	"ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+	"SET_TITLE" => "N",	// Устанавливать заголовок страницы
+	"SET_STATUS_404" => "N",	// Устанавливать статус 404, если не найдены элемент или раздел
+	"INCLUDE_IBLOCK_INTO_CHAIN" => "N",	// Включать инфоблок в цепочку навигации
+	"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+	"HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+	"PARENT_SECTION" => "",	// ID раздела
+	"PARENT_SECTION_CODE" => "",	// Код раздела
+	"INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
+	"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+	"DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
+	"PAGER_TITLE" => "Ќовости",	// Название категорий
+	"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+	"PAGER_TEMPLATE" => "",	// Шаблон постраничной навигации
+	"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+	"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+	"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+	"DISPLAY_DATE" => "Y",	// Выводить дату элемента
+	"DISPLAY_NAME" => "Y",	// Выводить название элемента
+	"DISPLAY_PICTURE" => "N",	// Выводить изображение для анонса
+	"DISPLAY_PREVIEW_TEXT" => "N",	// Выводить текст анонса
+	"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+	),
+	false
+);
+?>
+    </div>
+	<!-- советы портного конец -->
+</div>
 
-$intSectionID = 0;
-?><?$intSectionID = $APPLICATION->IncludeComponent(
+<!-- управление выводом каталога -->
+<div class="col-xs-9 filtr__top">
+    <div class="row">
+        <div class="col-xs-2">
+            <input class="filtr__top-grid-chk" type="radio" name="sort" id="grid"/>
+            <label class="filtr__top-grid" for="grid"></label>
+
+
+            <input class="filtr__top-linear-chk" checked type="radio" name="sort" id="linear"/>
+            <label class="filtr__top-linear" for="linear"></label>
+
+        </div>
+        <div class="col-xs-6">
+            <p class="filtr__top-sort-text">Сортировать</p>
+            <select class="chosen-select ">
+                <option>Последние добавленные</option>
+                <option>По популярности</option>
+            </select>
+        </div>
+
+        <div class="col-xs-4">
+            <p class="filtr__top-sort-text">Показывать</p>
+            <select class="chosen-select-saw ">
+                <option>30 товаров</option>
+                <option>60 товаров</option>
+                <option>90 товаров</option>
+                <option>120 товаров</option>
+            </select>
+        </div>
+    </div>
+</div>
+<!-- управление выводом каталога конец -->
+
+<!-- каталог -->
+<div class="col-xs-9">
+    <div class="row">
+        <div class="col-xs-12 saw">
+            <div class="row">
+				<div class="col-xs-12 catalog saw__grid">
+					<div class="row">
+<?$intSectionID = $APPLICATION->IncludeComponent(
 	"bitrix:catalog.section",
-	"",
+	"shik",
 	array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -232,87 +246,23 @@ $intSectionID = 0;
 		"ADD_SECTIONS_CHAIN" => "N"
 	),
 	$component
-);?><?
-if ($verticalGrid)
-{
-	?></div>
-	<div style="clear: both;"></div>
-</div><?
-}
-?>
-<?
-if (\Bitrix\Main\ModuleManager::isModuleInstalled("sale"))
-{
-	$arRecomData = array();
-	$recomCacheID = array('IBLOCK_ID' => $arParams['IBLOCK_ID']);
-	$obCache = new CPHPCache();
-	if ($obCache->InitCache(36000, serialize($recomCacheID), "/sale/bestsellers"))
-	{
-		$arRecomData = $obCache->GetVars();
-	}
-	elseif ($obCache->StartDataCache())
-	{
-		if (\Bitrix\Main\Loader::includeModule("catalog"))
-		{
-			$arSKU = CCatalogSKU::GetInfoByProductIBlock($arParams['IBLOCK_ID']);
-			$arRecomData['OFFER_IBLOCK_ID'] = (!empty($arSKU) ? $arSKU['IBLOCK_ID'] : 0);
-		}
-		$obCache->EndDataCache($arRecomData);
-	}
-	if (!empty($arRecomData))
-	{
-		?><?$APPLICATION->IncludeComponent("bitrix:sale.bestsellers", ".default", array(
-			"HIDE_NOT_AVAILABLE" => $arParams["HIDE_NOT_AVAILABLE"],
-			"PAGE_ELEMENT_COUNT" => "4",
-			"SHOW_DISCOUNT_PERCENT" => $arParams['SHOW_DISCOUNT_PERCENT'],
-			"PRODUCT_SUBSCRIPTION" => $arParams['PRODUCT_SUBSCRIPTION'],
-			"SHOW_NAME" => "Y",
-			"SHOW_IMAGE" => "Y",
-			"MESS_BTN_BUY" => $arParams['MESS_BTN_BUY'],
-			"MESS_BTN_DETAIL" => $arParams['MESS_BTN_DETAIL'],
-			"MESS_NOT_AVAILABLE" => $arParams['MESS_NOT_AVAILABLE'],
-			"MESS_BTN_SUBSCRIBE" => $arParams['MESS_BTN_SUBSCRIBE'],
-			"LINE_ELEMENT_COUNT" => 4,
-			"TEMPLATE_THEME" => (isset($arParams['TEMPLATE_THEME']) ? $arParams['TEMPLATE_THEME'] : ''),
-			"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
-			"CACHE_TYPE" => $arParams["CACHE_TYPE"],
-			"CACHE_TIME" => $arParams["CACHE_TIME"],
-			"BY" => array(
-				0 => "AMOUNT",
-			),
-			"PERIOD" => array(
-				0 => "15",
-			),
-			"FILTER" => array(
-				0 => "CANCELED",
-				1 => "ALLOW_DELIVERY",
-				2 => "PAYED",
-				3 => "DEDUCTED",
-				4 => "N",
-				5 => "P",
-				6 => "F",
-			),
-			"FILTER_NAME" => $arParams["FILTER_NAME"],
-			"ORDER_FILTER_NAME" => "arOrderFilter",
-			"DISPLAY_COMPARE" => $arParams["USE_COMPARE"],
-			"SHOW_OLD_PRICE" => $arParams['SHOW_OLD_PRICE'],
-			"PRICE_CODE" => $arParams["PRICE_CODE"],
-			"SHOW_PRICE_COUNT" => $arParams["SHOW_PRICE_COUNT"],
-			"PRICE_VAT_INCLUDE" => $arParams["PRICE_VAT_INCLUDE"],
-			"CONVERT_CURRENCY" => $arParams['CONVERT_CURRENCY'],
-			"BASKET_URL" => $arParams["BASKET_URL"],
-			"ACTION_VARIABLE" => $arParams["ACTION_VARIABLE"],
-			"PRODUCT_ID_VARIABLE" => $arParams["PRODUCT_ID_VARIABLE"],
-			"PRODUCT_QUANTITY_VARIABLE" => $arParams["PRODUCT_QUANTITY_VARIABLE"],
-			"ADD_PROPERTIES_TO_BASKET" => (isset($arParams["ADD_PROPERTIES_TO_BASKET"]) ? $arParams["ADD_PROPERTIES_TO_BASKET"] : ''),
-			"PRODUCT_PROPS_VARIABLE" => $arParams["PRODUCT_PROPS_VARIABLE"],
-			"PARTIAL_PRODUCT_PROPERTIES" => (isset($arParams["PARTIAL_PRODUCT_PROPERTIES"]) ? $arParams["PARTIAL_PRODUCT_PROPERTIES"] : ''),
-			"USE_PRODUCT_QUANTITY" => $arParams['USE_PRODUCT_QUANTITY'],
-			"SHOW_PRODUCTS_".$arParams["IBLOCK_ID"] => "Y",
-			"OFFER_TREE_PROPS_".$arRecomData['OFFER_IBLOCK_ID'] => $arParams["OFFER_TREE_PROPS"]
-		),
-		$component
-	);
-	}
-}
-?>
+);?>
+			
+              
+                
+            </div>
+        </div>
+    <div class="col-xs-12">
+        <div class="line">
+
+        </div>
+    </div>
+    </div>
+
+
+</div>
+<!-- каталог конец -->
+
+</div>
+</section>
+<!-- каталог товаров конец -->

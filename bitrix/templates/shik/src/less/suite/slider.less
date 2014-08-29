@@ -1,0 +1,100 @@
+.slider {
+  &__controls {
+    margin-right: -20px;
+    margin-bottom: 10px;
+    &-list {
+      padding-left: 0px;
+      margin-bottom: 0px;
+      list-style: none;
+      font-size: 0px;
+      &-item {
+        display: inline-block;
+        width: 25%;
+        padding-right: 20px;
+        a {
+          color: #5d230c; // text color
+          font-family: "PT Sans", sans-serif;
+          font-size: 16px;
+          display: inline-block;
+          width: 100%;
+          border-bottom: 1px solid #5d230c;
+          padding: 5px 0px;
+          cursor: pointer;
+          &:hover {
+            text-decoration: none;
+            color: #c57300; // text color
+            border-bottom: 1px solid #c57300;
+          }
+        }
+        &.active {
+          a {
+            color: #c57300; // text color
+            font-weight: bold;
+            border-bottom: 1px solid #c57300;
+          }
+        }
+      }
+    }
+  }
+  &__slide {
+    height: 360px !important;
+    position: relative;
+    &-img {
+      display: none !important;
+    }
+    &-content {
+      margin-top: 115px;
+      background-color: rgba(0, 0, 0, .9);
+      position: relative;
+      display: inline-block;
+      padding: 25px 0px 20px 40px;
+      overflow: visible;
+      z-index: 5;
+      &-title {
+        color: #fff; // text color
+        font-family: "PT Serif", serif;
+        font-size: 35px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 3px;
+        margin-right: -35px;
+      }
+      &-text {
+        color: #fff; // text color
+        font-family: "PT Sans", serif;
+        font-size: 12.7pt;
+        margin-right: -20px;
+        font-weight: bold;
+      }
+      &-link {
+        color: #f12a2a; // text color
+        font-family: "PT Sans", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: underline;
+        &:hover {
+          color: #f12a2a; // text color
+          text-decoration: none;
+        }
+      }
+      &:after {
+        position: absolute;
+        left: 100%;
+        top: 0px;
+        bottom: 0px;
+        content: ' ';
+        width: 124px;
+        height: 100%;
+        background: linear-gradient(to right bottom, rgba(0, 0, 0, .9) 50%, transparent 50%);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+#slides-container {
+  height: 360px;
+  margin-bottom: 5px;
+  position: relative;
+  overflow: hidden;
+}

@@ -1,0 +1,57 @@
+
+
+.page{
+  &__news{
+    border-bottom: 1px solid #cccccc;
+    &-title{
+      font-size: 32px;
+      font-family: "PT Sans",sans-serif;
+      font-weight: bold;
+      margin: -10px 0px 20px 0px;
+    }
+  &-item{
+
+    &-img{
+      &-wrapper{
+        border: 1px solid #cccccc;
+        width: 700px;
+      }
+    }
+    &-link{
+      display: inline-block;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "PT Sans",sans-serif;
+      color: #293be7;
+      text-decoration: underline;
+
+          &:hover{
+            text-decoration: none;
+            border-bottom: none;
+            color: #293be7;
+          }
+    }
+    &-text{
+      display: block;
+      width: 700px;
+    }
+    &-btn{
+      color: #c57300; // text color
+      font-family: "PT Sans", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      .border-radius(20px); // border radius
+      background-color: rgba(0, 0, 0, 0); // layer fill content
+      border: 2px solid #c57300;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      padding: 10px 30px;
+      &:hover {
+        border: 2px solid #c57300;
+        background-color: #c57300;
+        color: #fff;
+      }
+    }
+  }
+  }
+}

@@ -1,0 +1,116 @@
+@import "/bower_components/lesshat/build/lesshat";
+@import "/bower_components/bootstrap/less/bootstrap";
+//fonts
+//PT Sans
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
+//PT Serif
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700&subset=latin,cyrillic);
+//PT Sans Narrow
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=latin,cyrillic);
+
+//variables
+@bg-color: #fff;
+@grid-gutter-width: 20px;
+
+.container {
+  width: 1024px;
+  padding: 0px 0px;
+  .box-shadow(~"0 0px 24px rgba(1,1,1,.2)"); // drop shadow
+}
+
+.sections {
+  padding: 0px 40px;
+  background-color: @bg-color;
+  &-transparent {
+    padding: 0px 20px;
+    background-color: #ffffff;
+  }
+  &-footer {
+    background-color: rgba(93, 35, 11, 0.87); // layer fill content
+    &-developer {
+      background-color: rgba(159, 93, 63, 0.88); // layer fill content
+    }
+  }
+}
+
+body {
+  background: url("/src/img/pattern.jpg");
+}
+
+@import "healper/sprites";
+
+@import "suite/header";
+@import "suite/menu";
+@import "suite/slider";
+@import "suite/menu-catalog";
+@import "suite/popular";
+@import "suite/tips";
+@import "suite/individual-coat";
+@import "suite/footer";
+@import "suite/catalog";
+@import "suite/item_shop";
+@import "suite/remont";
+@import "suite/news_item";
+@import "suite/news";
+@import "suite/pagination";
+@import "suite/poshiv";
+@import "suite/individual-coat_form";
+@import "suite/thanks";
+
+.chosen-container-single {
+  .chosen-single {
+    //    text-align: center;
+    span {
+      border-bottom: 1px dotted #000000;
+      line-height: 13px;
+      display: inline-block;
+      margin-top: 8px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.chosen-container-single .chosen-single {
+  .border-radius(15px); // border radius
+
+  height: 30px;
+  background: #fff;
+  border-color: #c57300;
+  color: #5e240c; // text color
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single {
+  border-color: #c57300;
+  background: #ffffff;
+  color: #5e240c; // text color
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+
+}
+
+.chosen-container-single .chosen-drop {
+  border-color: #c57300;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: #5e240c; // text color
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+}
+
+.chosen-container .chosen-results li.active-result {
+  padding-left: 15px;
+}
+
+.chosen-container .chosen-results li.highlighted {
+  padding-left: 15px;
+  border-radius: 15px;
+  background: #c57300;
+  color: #fff; // text color
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+}
+
+

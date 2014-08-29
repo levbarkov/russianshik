@@ -1,0 +1,113 @@
+.section-popular {
+  margin-top: 40px;
+}
+
+.popular {
+  &__title {
+    color: #000; // text color
+    font-family: "PT Sans", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0px;
+  }
+  &__controls {
+    display: inline-block;
+    margin-bottom: 10px;
+    &-btn {
+      .border-radius(15px); // border radius
+      font-family: "PT Sans", sans-serif;
+      font-size: 14px;
+      padding: 6px 12px 4px;
+      margin-left: 20px;
+      color: #5e240c; // text color
+      border: 1px solid #c47200;
+      &:hover {
+        color: #5e240c; // text color
+        border: 1px solid #c47200;
+        background-color: rgba(196, 114, 0, 0.70);
+      }
+      &:focus {
+        border: 1px solid #c47200;
+        outline: 0 !important;
+      }
+      &.active {
+        background-color: #c47200; // layer fill content
+        border: 1px solid #c47200;
+        color: #fff; // text color
+      }
+    }
+  }
+  &__list {
+    .make-row();
+    overflow: hidden;
+    &-item {
+      position: relative;
+      &-col {
+        .make-xs-column(4);
+        width: 33.33333%;
+        float: none;
+        margin: 0 -0.125em;
+        display: none;
+        vertical-align: top;
+      }
+      &-img {
+       display: none;
+        &-wrapper {
+          height: 300px;
+          display: block;
+          background: url('') no-repeat center center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+      }
+      &-link {
+        color: #283ae6; // text color
+        font-family: "PT Sans", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 15px;
+        display: inline-block;
+        text-decoration: underline;
+        &:hover {
+          color: #283ae6; // text color
+          text-decoration: none;
+        }
+      }
+      &-cost {
+        color: #000; // text color
+        font-family: "PT Serif", serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        display: block;
+      }
+      &-alert {
+        top: 250px;
+        left: 0px;
+        position: absolute;
+        background-color: #f11e1e;
+        color: #fff; // text color
+        font-family: "PT Serif", serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 5px 20px;
+        &:after {
+          position: absolute;
+          left: 100%;
+          top: 0px;
+          content: ' ';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 16.5px 0 16.5px 10px;
+          border-color: transparent transparent transparent #f11e1e;
+        }
+      }
+    }
+  }
+}

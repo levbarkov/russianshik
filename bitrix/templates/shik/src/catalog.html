@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="/dist/css/libs.css"/>
+    <link rel="stylesheet" href="/dist/css/style.css"/>
+    <!--<link rel="stylesheet" href="dist/css/style.min.css"/>-->
+    <!--[if lt IE 9]>
+    <script src="bower_components/respond/dest/respond.min.js"></script>
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+<style>
+    .browsehappy {
+        margin: 0.2em 0;
+        background: #ccc;
+        color: #000;
+        padding: 0.2em 0;
+    }
+</style>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container">
+
+
+<div class="sections">
+<section class="header">
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="header__logo-wrapper">
+                <div class="header__logo">
+                    <img class="img img-responsive header__logo-img" src="../src/img/logo.png" alt=""/>
+
+                    <p class="header__logo-text">
+                        Изделия из меха
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-2 col-xs-offset-1">
+            <div class="header__menu-wrapper">
+                <ul class="header__menu-list">
+                    <li class="header__menu-list-item">
+                        <a class="header__menu-list-item-link" href="#">Доставка и оплата
+                        </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                        <a class="header__menu-list-item-link" href="#">Оптовым клиентам
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-2">
+            <div class="header__menu-wrapper">
+                <ul class="header__menu-list">
+                    <li class="header__menu-list-item">
+                        <a class="header__menu-list-item-link" href="#">О компании
+                        </a>
+                    </li>
+                    <li class="header__menu-list-item">
+                        <a class="header__menu-list-item-link" href="#">Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="header__phone-wrapper-container">
+                <div class="header__phone-wrapper">
+                    <a class="header__phone-link" href="#">
+                        <span class="icon icon-phone header__phone-icon"></span>
+                        8 (391) 245-56-43
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="menu">
+    <nav>
+        <ul class="menu__list">
+            <li class="menu__list-item">
+                <a class="menu__list-item-link" href="/src/catalog.html">
+                    Женщинам
+                </a>
+            </li>
+            <li class="menu__list-item">
+                <a class="menu__list-item-link" href="#">
+                    Аксессуары
+                </a>
+            </li>
+            <li class="menu__list-item">
+                <a class="menu__list-item-link" href="#">
+                    Ремонт одежды
+                </a>
+            </li>
+            <li class="menu__list-item">
+                <a class="menu__list-item-link" href="#">
+                    Пошив на заказ
+                </a>
+            </li>
+            <li class="menu__list-item">
+                <a class="menu__list-item-link" href="#">
+                    Меховые шкурки
+                </a>
+            </li>
+            <li class="menu__list-item">
+                <a class="menu__list-item-link" href="#">
+                    Советы портного
+                </a>
+            </li>
+        </ul>
+    </nav>
+</section>
+<section>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="goods__breadcrumb">
+                <ol class="breadcrumb goods__breadcrumb-list">
+                    <li class="goods__breadcrumb-item"><a class="goods__breadcrumb-item-link"
+                                                          href="index.html">Главная</a></li>
+
+                    <li class="active">Женщинам</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="catalog" ng-app="app">
+<div class="row">
+<div class="col-xs-12">
+    <h1 class="catalog__title">Примеp длиного названия/заголовка</h1>
+</div>
+<div class="col-xs-3 ">
+    <h3 class="filtr__left-amount">Всего позиций</h3>
+
+    <div class="filtr__left">
+        <div class="filtr__left-menu">
+            <p class="filtr__left-menu-title">Тип изделия</p>
+            <ul class="filtr__left-menu-list">
+                <li class="filtr__left-menu-item">
+                    <input class="filtr__left-menu-chk" checked type="checkbox" id="vest"/>
+                    <label class="filtr__left-menu-label" for="vest"><span
+                            class="filtr__left-menu-square"></span>Меховые жилеты</label>
+                </li>
+                <li class="filtr__left-menu-item">
+                    <input class="filtr__left-menu-chk" type="checkbox" id="jackets"/>
+                    <label class="filtr__left-menu-label" for="jackets"><span
+                            class="filtr__left-menu-square"></span>Жакеты из меха</label>
+                </li>
+                <li class="filtr__left-menu-item">
+                    <input class="filtr__left-menu-chk" type="checkbox" id="triggers"/>
+                    <label class="filtr__left-menu-label" for="triggers"><span
+                            class="filtr__left-menu-square"></span>Куртки меховые</label>
+                </li>
+            </ul>
+        </div>
+        <div class="filtr__left-price">
+            <p class="filtr__left-price-title">Цена <span class="filtr__left-price-title-span">(руб.)</span>
+            </p>
+
+            <div class="filtr__left-price-align">
+                <p class="filtr__left-price-before">от</p>
+                <input class="filtr__left-price-min" type="text"/>
+
+                <p class="filtr__left-price-after">до</p>
+                <input class="filtr__left-price-max" type="text"/>
+            </div>
+        </div>
+        <div class="filtr__left-size">
+            <p class="filtr__left-size-title">Размер</p>
+            <ul class="filtr__left-size-list">
+                <li class="filtr__left-size-item">
+                    <input class="filtr__left-size-item-chk" checked type="radio" name="size"
+                           id="first_item"/>
+                    <label class="filtr__left-size-item-label" for="first_item"><b>44</b>
+                        (170x44x60)</label>
+                </li>
+                <li class="filtr__left-size-item">
+                    <input class="filtr__left-size-item-chk" type="radio" name="size"
+                           id="second_item"/>
+                    <label class="filtr__left-size-item-label" for="second_item"><b>44</b>
+                        (170x44x60)</label>
+                </li>
+                <li class="filtr__left-size-item">
+                    <input class="filtr__left-size-item-chk" type="radio" name="size"
+                           id="third_item"/>
+                    <label class="filtr__left-size-item-label" for="third_item"><b>44</b>
+                        (170x44x60)</label>
+                </li>
+                <li class="filtr__left-size-item">
+                    <input class="filtr__left-size-item-chk" type="radio" name="size"
+                           id="fourth_item"/>
+                    <label class="filtr__left-size-item-label" for="fourth_item"><b>44</b>
+                        (170x44x60)</label>
+                </li>
+            </ul>
+        </div>
+        <div class="filtr__left-pick">
+            <a class="filtr__left-pick-up" href="#">Подобрать</a>
+            <a class="filtr__left-pick-reset" href="#">Сбросить</a>
+        </div>
+    </div>
+    <SCRIPT src="/bower_components/chosen_v1.1.0/chosen.jquery.js"></SCRIPT>
+    <div class="tips ">
+        <h2 class="tips__title-catalog">
+            Советы портного
+        </h2>
+
+        <div class="tips__tip">
+            <div class="tips__tip-img-wrapper">
+                <img class="tips__tip-img" src="/dist/img/slider-bg-1.jpg" alt=""/>
+            </div>
+            <a class="tips__tip-link" href="#">Как выбрать свой размер?</a>
+        </div>
+        <div class="tips__tip">
+            <div class="tips__tip-img-wrapper">
+                <img class="tips__tip-img" src="/dist/img/slider-bg-1.jpg" alt=""/>
+            </div>
+            <a class="tips__tip-link" href="#">Как выбрать свой размер?</a>
+        </div>
+        <div class="tips__tip">
+            <div class="tips__tip-img-wrapper">
+                <img class="tips__tip-img" src="/dist/img/slider-bg-1.jpg" alt=""/>
+            </div>
+            <a class="tips__tip-link" href="#">Как выбрать свой размер?</a>
+        </div>
+    </div>
+</div>
+<div class="col-xs-9 filtr__top">
+    <div class="row">
+        <div class="col-xs-2">
+            <input class="filtr__top-grid-chk" type="radio" name="sort" id="grid"/>
+            <label class="filtr__top-grid" for="grid"></label>
+
+
+            <input class="filtr__top-linear-chk" checked type="radio" name="sort" id="linear"/>
+            <label class="filtr__top-linear" for="linear"></label>
+
+        </div>
+        <div class="col-xs-6">
+            <p class="filtr__top-sort-text">Сортировать</p>
+            <select class="chosen-select ">
+                <option>Последние добавленные</option>
+                <option>По популярности</option>
+            </select>
+        </div>
+
+        <div class="col-xs-4">
+            <p class="filtr__top-sort-text">Показывать</p>
+            <select class="chosen-select-saw ">
+                <option>30 товаров</option>
+                <option>60 товаров</option>
+                <option>90 товаров</option>
+                <option>120 товаров</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="col-xs-9">
+    <div class="row">
+        <div class="col-xs-12 saw">
+            <div class="row">
+                <div class="col-xs-12 catalog saw__grid">
+                    <div class="row">
+                        <div class="col-xs-4 catalog__grid-item">
+                            <div class="catalog__grid-item-photo">
+                                <a class="catalog__grid-item-photo-link" href="#">
+                                    <div class="catalog__grid-item-photo-img-wrapper">
+                                        <img class="catalog__grid-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        <span class="catalog__grid-item-sale-alert">скидка</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="catalog__grid-item-model">Lorem ipsum dolor sit amet, conui ut, voluptate. Debitis
+                                quam totam?</a>
+
+                            <p class="catalog__grid-item-price">5600 руб.</p>
+
+                            <p class="catalog__grid-item-price-old">6800 руб.</p>
+                        </div>
+                        <div class="col-xs-4 catalog__grid-item">
+                            <div class="catalog__grid-item-photo">
+                                <a class="catalog__grid-item-photo-link" href="#">
+                                    <div class="catalog__grid-item-photo-img-wrapper">
+                                        <img class="catalog__grid-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        <span class="catalog__grid-item-sale-alert">скидка</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="catalog__grid-item-model">Lorem ipsum dolor sit amet, , molestiae nobis quam
+                                totam?</a>
+
+                            <p class="catalog__grid-item-price">5600 руб.</p>
+
+                            <p class="catalog__grid-item-price-old">6800 руб.</p>
+                        </div>
+                        <div class="col-xs-4 catalog__grid-item">
+                            <div class="catalog__grid-item-photo">
+                                <a class="catalog__grid-item-photo-link" href="#">
+                                    <div class="catalog__grid-item-photo-img-wrapper">
+                                        <img class="catalog__grid-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        <span class="catalog__grid-item-sale-alert">скидка</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="catalog__grid-item-model">natus ratione sapiente sequi ut, voluptate. totam?</a>
+
+                            <p class="catalog__grid-item-price">5600 руб.</p>
+
+                            <p class="catalog__grid-item-price-old">6800 руб.</p>
+                        </div>
+                        <div class="col-xs-4 catalog__grid-item">
+                            <div class="catalog__grid-item-photo">
+                                <a class="catalog__grid-item-photo-link" href="#">
+                                    <div class="catalog__grid-item-photo-img-wrapper">
+                                        <img class="catalog__grid-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        <span class="catalog__grid-item-sale-alert">скидка</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="catalog__grid-item-model">tus ratione sapientus eaque molestiae nobis quam
+                                totam?</a>
+
+                            <p class="catalog__grid-item-price">5600 руб.</p>
+
+                            <p class="catalog__grid-item-price-old">6800 руб.</p>
+                        </div>
+                        <div class="col-xs-4 catalog__grid-item">
+                            <div class="catalog__grid-item-photo">
+                                <a class="catalog__grid-item-photo-link" href="#">
+                                    <div class="catalog__grid-item-photo-img-wrapper">
+                                        <img class="catalog__grid-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        <span class="catalog__grid-item-sale-alert">скидка</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="catalog__grid-item-model">Latus ratione sapiente sequi ut, voluptate. Debitis
+                                delectus eaque molestiae nobis quam totam?</a>
+
+                            <p class="catalog__grid-item-price">5600 руб.</p>
+
+                            <p class="catalog__grid-item-price-old">6800 руб.</p>
+                        </div>
+                        <div class="col-xs-4 catalog__grid-item">
+                            <div class="catalog__grid-item-photo">
+                                <a class="catalog__grid-item-photo-link" href="#">
+                                    <div class="catalog__grid-item-photo-img-wrapper">
+                                        <img class="catalog__grid-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        <span class="catalog__grid-item-sale-alert">скидка</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="catalog__grid-item-model">Lorem ipsum dolor sit maxime nam natus ratione stam?</a>
+
+                            <p class="catalog__grid-item-price">5600 руб.</p>
+
+                            <p class="catalog__grid-item-price-old">6800 руб.</p>
+                        </div>
+                        <div class="col-xs-4 catalog__grid-item">
+                            <div class="catalog__grid-item-photo">
+                                <a class="catalog__grid-item-photo-link" href="#">
+                                    <div class="catalog__grid-item-photo-img-wrapper">
+                                        <img class="catalog__grid-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        <span class="catalog__grid-item-sale-alert">скидка</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="catalog__grid-item-model">Lorem ipsum dolor sit amet, Debitis delectus eaque
+                                molestiae nobis quam totam?</a>
+
+                            <p class="catalog__grid-item-price">5600 руб.</p>
+
+                            <p class="catalog__grid-item-price-old">6800 руб.</p>
+                        </div>
+                        <div class="col-xs-4 catalog__grid-item">
+                            <div class="catalog__grid-item-photo">
+                                <a class="catalog__grid-item-photo-link" href="#">
+                                    <div class="catalog__grid-item-photo-img-wrapper">
+                                        <img class="catalog__grid-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        <span class="catalog__grid-item-sale-alert">скидка</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="catalog__grid-item-model">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Aperiam at distinctio id in incidunt itaque maxime nam natus ratione sapiente
+                                sequi ut, voluptate. Debitis delectus eaque molestiae nobis quam totam?</a>
+
+                            <p class="catalog__grid-item-price">5600 руб.</p>
+
+                            <p class="catalog__grid-item-price-old">6800 руб.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 catalog saw__linear">
+                    <div class="row">
+                        <div class="col-xs-12 catalog__linear-item">
+                            <table class="linear__table">
+                                <tr class="linear__table-row">
+                                    <td class="linear__table-col-alert"><span class="catalog__linear-item-sale-alert">скидка</span>
+                                    </td>
+                                    <td class="linear__table-col-name"><a class="catalog__linear-item-name" href="#">Лисица
+                                        вольная Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, maiores!
+                                        натуральный</a></td>
+                                    <td class="linear__table-col-icon">
+                                        <a class="catalog__linear-item-icon" href="#"></a>
+                                        <div class="catalog__linear-item-photo-img-wrapper" >
+                                            <img class="catalog__linear-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        </div>
+                                    </td>
+
+                                    <td class="linear__table-col-price-old"><p class="catalog__linear-item-price-old">
+                                        6800000 руб.</p></td>
+                                    <td class="linear__table-col-price-new"><p class="catalog__linear-item-price-new">
+                                        5600000 руб.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12 catalog__linear-item">
+                            <table class="linear__table">
+                                <tr class="linear__table-row">
+                                    <td class="linear__table-col-alert"><span class="catalog__linear-item-sale-alert">скидка</span>
+                                    </td>
+                                    <td class="linear__table-col-name"><a class="catalog__linear-item-name" href="#">Лисица
+                                        вольная
+                                        натуральный</a></td>
+                                    <td class="linear__table-col-icon"><a class="catalog__linear-item-icon"
+                                                                          href="#"></a></td>
+                                    <td class="linear__table-col-price-old"><p class="catalog__linear-item-price-old">
+                                        6800000 руб.</p></td>
+                                    <td class="linear__table-col-price-new"><p class="catalog__linear-item-price-new">
+                                        5600000 руб.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12 catalog__linear-item">
+                            <table class="linear__table">
+                                <tr class="linear__table-row">
+                                    <td class="linear__table-col-alert"><span class="catalog__linear-item-sale-alert">скидка</span>
+                                    </td>
+                                    <td class="linear__table-col-name"><a class="catalog__linear-item-name" href="#">Лисица
+                                        вольная Lorem ipsum dolor sit amet,
+                                        натуральный</a></td>
+                                    <td class="linear__table-col-icon">
+                                        <a class="catalog__linear-item-icon" href="#"></a>
+                                        <div class="catalog__linear-item-photo-img-wrapper" >
+                                            <img class="catalog__linear-item-photo-img" src="/src/img/model_img.png" alt="#"/>
+                                        </div>
+                                    </td>
+                                    <td class="linear__table-col-price-old"><p class="catalog__linear-item-price-old">
+                                        68000 руб.</p></td>
+                                    <td class="linear__table-col-price-new"><p class="catalog__linear-item-price-new">
+                                        56000 руб.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12 catalog__linear-item">
+                            <table class="linear__table">
+                                <tr class="linear__table-row">
+                                    <td class="linear__table-col-alert"><span class="catalog__linear-item-sale-alert">скидка</span>
+                                    </td>
+                                    <td class="linear__table-col-name"><a class="catalog__linear-item-name" href="#">Лисица
+                                        вольная Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, maiores!
+                                        натуральный</a></td>
+                                    <td class="linear__table-col-icon"><a class="catalog__linear-item-icon"
+                                                                          href="#"></a></td>
+                                    <td class="linear__table-col-price-old"><p class="catalog__linear-item-price-old">
+                                        680000 руб.</p></td>
+                                    <td class="linear__table-col-price-new"><p class="catalog__linear-item-price-new">
+                                        560000 руб.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-12 catalog__linear-item">
+                            <table class="linear__table">
+                                <tr class="linear__table-row">
+                                    <td class="linear__table-col-alert"><span class="catalog__linear-item-sale-alert">скидка</span>
+                                    </td>
+                                    <td class="linear__table-col-name"><a class="catalog__linear-item-name" href="#">Лисица
+                                        вольная Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, maiores!
+                                        натуральный</a></td>
+                                    <td class="linear__table-col-icon"><a class="catalog__linear-item-icon"
+                                                                          href="#"></a></td>
+                                    <td class="linear__table-col-price-old"><p class="catalog__linear-item-price-old">
+                                        6800000 руб.</p></td>
+                                    <td class="linear__table-col-price-new"><p class="catalog__linear-item-price-new">
+                                        5600000 руб.</p></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-xs-12">
+        <div class="line">
+
+        </div>
+    </div>
+    </div>
+
+
+    <div class="col-xs-12">
+        <ul class="pagination">
+            <li class="pagination__item"><a class="pagination__item-link" href="#"><span
+                    class="arrow__pagi-left"></span></a></li>
+            <li class="pagination__item active"><a class="pagination__item-link" href="#">1</a></li>
+            <li class="pagination__item"><a class="pagination__item-link" href="#">2</a></li>
+            <li class="pagination__item"><a class="pagination__item-link" href="#">3</a></li>
+            <li class="pagination__item"><a class="pagination__item-link" href="#">4</a></li>
+            <li class="pagination__item"><a class="pagination__item-link" href="#">5</a></li>
+            <li class="pagination__item"><a class="pagination__item-link" href="#">...</a></li>
+            <li class="pagination__item"><a class="pagination__item-link" href="#">15</a></li>
+            <li class="pagination__item"><a class="pagination__item-link" href="#"><span
+                    class="arrow__pagi-right"></span></a></li>
+        </ul>
+    </div>
+
+
+</div>
+</div>
+
+
+
+
+</section>
+</div>
+
+
+
+<div class="sections sections-footer">
+    <div class="footer">
+        <div class="row">
+            <div class="col-xs-3">
+                <h4 class="footer__list-title">
+                    Каталог
+                </h4>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="#">
+                            Женская коллекция
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="#">
+                            Меховые шкурки
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <h4 class="footer__list-title">
+                    Каталог
+                </h4>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="#">
+                            Женская коллекция
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <h4 class="footer__list-title">
+                    Каталог
+                </h4>
+                <ul class="footer__list">
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="#">
+                            Женская коллекция
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="#">
+                            Аксессуары
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="footer__list-item-link" href="#">
+                            Меховые шкурки
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <p class="footer__about-title">
+                    2002 - 2014 &copy; Русский шик
+                </p>
+                <a class="footer__about-phone" href="#">
+                    8 (391) 245 56 43
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="sections sections-footer-developer">
+    <div class="row">
+        <div class="col-xs-12 footer__developer">
+            <div class="row">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-3"></div>
+                <div class="col-xs-3"></div>
+                <div class="col-xs-3">
+                    <a class="footer__developer-about" href="http://bureauit.ru/">
+                        <span class="icon icon-develop-hover footer__developer-about-icon"></span>
+
+                        Разработка сайта
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<script src="dist/js/libs.js"></script>
+<script src="dist/js/suite.js"></script>
+<!--<script src="dist/js/suite.min.js"></script>-->
+</body>
+</html>

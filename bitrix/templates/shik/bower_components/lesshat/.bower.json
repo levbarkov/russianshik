@@ -21,5 +21,6 @@
   },
   "_source": "git://github.com/csshat/lesshat.git",
   "_target": "~3.0.2",
-  "_originalSource": "lesshat"
+  "_originalSource": "lesshat",
+  "_direct": true
 }

@@ -1,0 +1,214 @@
+
+.repair{
+    &__wrapper{
+      margin-top: 40px;
+    }
+
+    &__title{
+
+      color: #000000;
+      font-size: 32px;
+      font-family: "PT Sans", sans-serif;
+      font-weight: bold;
+      margin-top: -5px;
+
+  }
+
+    &__list {
+      padding: 0px;
+      &-icon{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        position: relative;
+          &-hover{
+            bottom: 0px;
+            position: absolute;
+            opacity: 0;
+              &:hover{
+                opacity: 1;
+              }
+          }
+        &-reshaping {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          position: relative;
+          &-hover {
+            bottom: 0px;
+            position: absolute;
+            opacity: 0;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+        &-restoration{
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          position: relative;
+          &-hover {
+            bottom: 0px;
+            position: absolute;
+            opacity: 0;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &-title{
+        margin: 0px;
+        padding: 0px;
+        font-family: "PT Sans",sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      &-item{
+        font-family: "PT Sans",sans-serif;
+        font-size: 14px;
+        &:before {
+          content: " - ";
+        }
+      }
+      &-link{
+        margin: 0px 10px;
+        font-size: 14px;
+        font-family: "PT Sans", sans-serif;
+        color: #293be7;
+        border-bottom: 1px solid #293be7;
+        display: inline-block;
+        line-height: 12px;
+          &:hover{
+            text-decoration: none;
+            color: #293be7;
+            border-bottom: none;
+          }
+      }
+
+      list-style: none;
+    }
+
+    &__download{
+      &-btn{
+          color: #c57300; // text color
+          font-family: "PT Sans", sans-serif;
+          font-size: 29px;
+          font-weight: bold;
+          .border-radius(15px); // border radius
+          background-color: rgba(0, 0, 0, 0); // layer fill content
+          border: 3px solid #c57300;
+          margin-top: 45px;
+          margin-bottom: 45px;
+          &:hover {
+            border: 3px solid #c57300;
+            background-color: #c57300;
+            color: #fff;
+          }
+
+      }
+    }
+
+    &__order{
+      &-title{
+        font-family: "PT Sans",sans-serif;
+        font-size: 26px;
+        font-weight: bold;
+        color: #000000;
+        margin: 0px 0px 30px 0px;
+      }
+      &-item{
+        text-align: center;
+      }
+      &-icon {
+
+        &-wrapper {
+
+          width: 160px;
+          height: 100px;
+          display: table-cell;
+          vertical-align: middle;
+
+        }
+        &-receiving {
+          display: block;
+          margin: 0px auto;
+          &:after{
+            content: " ";
+            display: inline-block;
+            height: 20px;
+            width: 35px;
+            background: url("/src/img/arrow_icon-after.png") no-repeat center;
+            margin: 20px 0px 0px 110px;
+          }
+        }
+        &-money {
+          display: block;
+          margin: 0px auto;
+          &:after{
+            content: " ";
+            display: inline-block;
+            height: 20px;
+            width: 35px;
+            background: url("/src/img/arrow_icon-after.png") no-repeat center;
+            margin: 35px 0px 0px 105px;
+          }
+        }
+        &-calendar{
+          display: block;
+          margin: 0px auto;
+          &:after{
+            content: " ";
+            display: inline-block;
+            height: 20px;
+            width: 35px;
+            background: url("/src/img/arrow_icon-after.png") no-repeat center;
+            margin: 35px 0px 0px 105px;
+          }
+        }
+        &-surrender{
+          display: block;
+          margin: 0px auto;
+        }
+        &-text{
+          display: inline-block;
+          word-wrap: break-word;
+          width: 132px;
+          font-size: 16px;
+          font-family: "PT Sans", sans-serif;
+        }
+        &-link{
+          color: #293be7;
+          text-decoration: underline;
+          font-family: "PT Sans",sans-serif;
+          font-size: 16px;
+            &:hover{
+              text-decoration: none;
+              color: #293be7;
+            }
+        }
+      }
+    }
+  }
+
+.tips{
+  margin-bottom: 85px;
+  &__title{
+    font-size: 18px;
+  }
+}
+
+.order-align{
+  text-align: center;
+  padding: 0px;
+}
+
+.arrow-icon{
+  position: absolute;
+  margin: -30px 105px;
+    &-after{
+      position: absolute;
+      margin: -44px 110px;
+    }
+}

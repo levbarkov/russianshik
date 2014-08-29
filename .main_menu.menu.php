@@ -37,7 +37,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Советы портного", 
-		"tailor_tips/", 
+		"tailor-tips/", 
 		Array(), 
 		Array(), 
 		"" 

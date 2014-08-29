@@ -9,10 +9,11 @@ if (!empty($arResult['ERROR']))
 }
 
 ?>
+
 <div id="slides-container">
 <?php foreach ($arResult as $slide): ?>
 	<div class="slider__slide">
-		<img class="slider__slide-img" src="<?php echo $slide['IMAGE_LINK']; ?>" alt=""/>
+		<img class="slider__slide-img" src="<?php echo $slide['IMAGE_LINK']; ?>" alt="<?php echo $slide['UF_SLIDE_TITLE']; ?>"/>
 		
 		<div class="slider__slide-content">
             <h3 class="slider__slide-content-title">
@@ -32,10 +33,16 @@ if (!empty($arResult['ERROR']))
 
 <div  class="slider__controls">
 	<ul id="slides-controls" class="slider__controls-list">
-	<?php foreach ($arResult as $slide): ?>
+	<?php if ($first = array_shift($arResult)) : ?>
 		<li class="slider__controls-list-item active">
-            <a><?php echo $slide['UF_SLIDE_NAME']; ?></a>
-        </li>
+			<a><?=$first['UF_SLIDE_NAME']; ?></a>
+		</li>
+	<?php endif ?>
+
+	<?php foreach ($arResult as $slide): ?>
+		<li class="slider__controls-list-item">
+			<a><?=$slide['UF_SLIDE_NAME']; ?></a>
+		</li>
 	<?php endforeach; ?>
 	</ul>
 </div>

@@ -1,0 +1,45 @@
+
+.pagination{
+  margin: 15px 0px 15px -10px;
+}
+
+.pagination > li > a, .pagination > li > span{
+  color:  #c57300;
+  border: none;
+  font-family: "PT Sans",sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px -5px 0px 0px;
+  text-decoration: underline;
+    &:hover, &:active, &:focus{
+      background: none;
+      color: #000000;
+      text-decoration: none;
+    }
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus{
+  background: none;
+  color: #000000;
+  text-decoration: none;
+}
+
+.arrow{
+  &__pagi{
+      &-left{
+        display: inline-block;
+        width: 14px;
+        height: 10px;
+      }
+    &-right{
+      display: inline-block;
+      width: 14px;
+      height: 10px;
+    }
+  }
+}

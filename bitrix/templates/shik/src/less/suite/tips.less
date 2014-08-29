@@ -1,0 +1,37 @@
+.tips {
+  margin-bottom: 25px;
+  &__title {
+    color: #000; // text color
+    font-family: "PT Sans", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0px;
+  }
+  &__tip {
+    margin-top: 20px;
+    &-link {
+      color: #293be7; // text color
+      font-family: "PT Sans", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 7px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &-img {
+      display: none;
+      &-wrapper {
+        height: 140px;
+        display: block;
+        background: url('') no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    }
+  }
+}

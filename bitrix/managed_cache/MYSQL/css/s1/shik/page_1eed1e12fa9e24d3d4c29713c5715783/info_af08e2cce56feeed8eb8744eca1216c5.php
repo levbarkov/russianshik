@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/shik/components/bitrix/news/tailor-tips/bitrix/news.detail/.default/style.css" => "1408443268629",), 'CUR_SEL_CNT' => '9', 'CUR_IE_CNT' => '0'); ?>

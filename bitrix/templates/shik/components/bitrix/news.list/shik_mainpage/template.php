@@ -1,6 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<h2 class="tips__title">
-   «<?=$arResult['NAME'];?>»
+	<h2 class="tips__title">
+		«<?=$arResult['NAME'];?>»
    </h2>
 <?if($arParams["DISPLAY_TOP_PAGER"]):?>
 	<?=$arResult["NAV_STRING"]?><br />

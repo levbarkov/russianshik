@@ -1,0 +1,43 @@
+.individual-coat {
+  position: relative;
+  height: 350px;
+  background: url("/src/img/individual-coat-bg.jpg") no-repeat;
+  background-position: 648px 13px;
+  border: 10px solid #000000;
+  &__body {
+    display: table-cell;
+    height: 350px;
+    vertical-align: middle;
+    &-title {
+      color: #000; // text color
+      font-family: "PT Sans", sans-serif;
+      font-size: 42px;
+      font-weight: bold;
+      margin-top: 0px;
+    }
+    &-text {
+      color: #000; // text color
+      font-family: "PT Sans", sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    &-btn {
+      display: inline-block;
+      color: #c57300; // text color
+      font-family: "PT Sans", sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      .border-radius(15px); // border radius
+      background-color: rgba(0, 0, 0, 0); // layer fill content
+      border: 3px solid #c57300;
+      margin-top: 30px;
+      padding: 10px 40px;
+      &:hover {
+        border: 3px solid #c57300;
+        background-color: #c57300;
+        color: #fff;
+      }
+    }
+  }
+
+}

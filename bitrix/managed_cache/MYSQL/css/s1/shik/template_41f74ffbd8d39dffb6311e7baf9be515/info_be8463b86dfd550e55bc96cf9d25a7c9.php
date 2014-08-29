@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/shik/dist/css/style.css" => "1408934793167810","/bitrix/templates/shik/dist/css/libs.css" => "14083590224108",), 'CUR_SEL_CNT' => '2628', 'CUR_IE_CNT' => '0'); ?>

@@ -1,0 +1,100 @@
+.tailoring{
+
+  &__title{
+    font-size: 32px;
+    color: #000000;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 20px;
+  }
+
+  p{
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    color: #000000;
+
+    word-wrap: break-word;
+  }
+  a{
+    color: #293be7;
+    display: inline-block;
+    border-bottom: 1px solid #293be7;
+    line-height: 18px;
+    cursor: pointer;
+    &:hover{
+      color: #293be7;
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+  h2{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "PT Sans",sans-serif;
+  }
+  h3{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "PT Sans",sans-serif;
+  }
+  ul{
+    padding: 0px;
+    list-style: none;
+    &>li{
+      &:before{
+        content: " - "  ;
+      }
+    }
+  }
+}
+
+.our-team{
+  margin-bottom: 10px;
+  &__title{
+    font-size: 26px;
+    color: #000000;
+    font-weight: bold;
+    font-family: "PT Sans",sans-serif;
+
+  }
+  &__person{
+
+    &-info{
+      text-align: center;
+    }
+    &-FIO{
+      font-size: 20px;
+      color: #000000;
+      font-weight: bold;
+      font-family: "PT Sans",sans-serif;
+      margin: 10px 0px 0px 0px;
+    }
+    &-exp{
+      font-size: 16px;
+      color: #000000;
+      font-family: "PT Sans",sans-serif;
+    }
+  }
+  &__item{
+    &-photo {
+      &-link {
+
+      }
+      &-img {
+        display: none;
+        &-wrapper {
+          width: 220px;
+          height: 220px;
+          display: block;
+          background: url('') no-repeat center center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+

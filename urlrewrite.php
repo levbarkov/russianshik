@@ -13,10 +13,10 @@ $arUrlRewrite = array(
 		"PATH" => "/catalog/women/index.php",
 	),
 	array(
-		"CONDITION" => "/#^tailor_tips#/",
+		"CONDITION" => "#^/tailor-tips/#",
 		"RULE" => "",
 		"ID" => "bitrix:news",
-		"PATH" => "/tailor_tips/index.php",
+		"PATH" => "/tailor-tips/index.php",
 	),
 	array(
 		"CONDITION" => "#^/catalog/#",
