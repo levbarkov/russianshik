@@ -12,6 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
 <section class="goods">
     <div class="row">
 		<!-- галерея -->
@@ -195,3 +196,31 @@ BX.message({
 	BTN_MESSAGE_CLOSE: '<? echo GetMessageJS('CT_BCE_CATALOG_BTN_MESSAGE_CLOSE') ?>'
 });
 </script>
+
+<!-- Вы просматривали -->
+<?
+$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"PATH" => SITE_DIR."include/viewed_product.php",
+		"AREA_FILE_RECURSIVE" => "N",
+		"EDIT_MODE" => "html",
+	),
+	false,
+	Array('HIDE_ICONS' => 'Y')
+);
+?>
+<!-- вы просматривали конец -->
+
+</div>
+<!-- заголовок и основная часть конец-->
+
+<!-- предложение шубы по индивидуальным меркам -->
+<div class="sections sections-transparent">
+    <div class="row">
+        <?$APPLICATION->IncludeFile(SITE_DIR."include/offer.php", Array(), Array("MODE" => "html", "NAME" => GetMessage("OFFER"),));?>
+    </div>
+</div>
+<!-- предложение шубы по индивидуальным меркам конец -->

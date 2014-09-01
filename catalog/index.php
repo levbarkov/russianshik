@@ -153,27 +153,6 @@ $filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_ada
 	false
 );?>
 
-<!-- Вы просматривали -->
-<?
-$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"PATH" => SITE_DIR."include/viewed_product.php",
-		"AREA_FILE_RECURSIVE" => "N",
-		"EDIT_MODE" => "html",
-	),
-	false,
-	Array('HIDE_ICONS' => 'Y')
-);
-?>
-
-<!-- Предложение шубы по индивидуальным меркам -->
-<div class="sections sections-transparent">
-    <div class="row">
-        <?$APPLICATION->IncludeFile(SITE_DIR."include/offer.php", Array(), Array("MODE" => "html", "NAME" => GetMessage("OFFER"),));?>
-    </div>
 </div>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

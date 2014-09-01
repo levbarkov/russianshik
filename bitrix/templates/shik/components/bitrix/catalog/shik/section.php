@@ -17,9 +17,6 @@ if (!$arParams['FILTER_VIEW_MODE'])
 $arParams['USE_FILTER'] = (isset($arParams['USE_FILTER']) && $arParams['USE_FILTER'] == 'Y' ? 'Y' : 'N');
 $verticalGrid = ('Y' == $arParams['USE_FILTER'] && $arParams["FILTER_VIEW_MODE"] == "VERTICAL");
 ?>
-<pre>
-<?php //print_r($arResult); ?>
-</pre>
 
 <!-- каталог товаров -->	
 <section class="catalog" ng-app="app">
@@ -121,53 +118,105 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "shik_mainpage", Array(
 </div>
 
 <!-- управление выводом каталога -->
+
+<?
+		global $sCatalogDisplay;
+		if ($_REQUEST['display']) {
+			$sCatalogDisplay = $_REQUEST['display'];
+		} elseif ($_SESSION['display']) {
+			$sCatalogDisplay = $_SESSION['display'];
+		} else {
+			$sCatalogDisplay = 'block';
+		}
+		$_SESSION['display'] = $sCatalogDisplay;
+		
+		global $sCatalogSort;
+		global $sCatalogSortOrder;
+		$sCatalogSort = strtolower($arParams["ELEMENT_SORT_FIELD"]);
+		$sCatalogSortOrder = strtolower($arParams["ELEMENT_SORT_ORDER"]);
+		if($_REQUEST['sort']) {$sCatalogSort = $_REQUEST['sort'];}
+		elseif($_SESSION['sort']) {$sCatalogSort = $_SESSION['sort'];}
+		$_SESSION['sort'] = $sCatalogSort;
+		if($_REQUEST['order']) {$sCatalogSortOrder = $_REQUEST['order'];}
+		elseif($_SESSION['order']) {$sCatalogSortOrder = $_SESSION['order'];}
+		$_SESSION['order'] = $sCatalogSortOrder;
+		
+		global $pageElementCount;
+		$pageElementCount = strtolower($arParams["PAGE_ELEMENT_COUNT"]);
+		if($_REQUEST['count']) {
+			$pageElementCount = $_REQUEST['count'];
+		} elseif($_SESSION['count']) {
+			$pageElementCount = $_SESSION['count'];
+		}
+		$_SESSION['count'] = $pageElementCount;
+?>
+
 <div class="col-xs-9 filtr__top">
     <div class="row">
         <div class="col-xs-2">
-            <input class="filtr__top-grid-chk" type="radio" name="sort" id="grid"/>
-            <label class="filtr__top-grid" for="grid"></label>
-
-
-            <input class="filtr__top-linear-chk" checked type="radio" name="sort" id="linear"/>
-            <label class="filtr__top-linear" for="linear"></label>
-
+			<a rel="nofollow" <?if ($sCatalogDisplay!="block"):?>href="<?=$APPLICATION->GetCurPageParam('display=block', array('display', 'mode'))?>"<?endif;?> class="filtr__top-grid"></a>
+			<a rel="nofollow" <?if ($sCatalogDisplay!="list"):?>href="<?=$APPLICATION->GetCurPageParam('display=list', 	array('display', 'mode'))?>"<?endif;?> class="filtr__top-linear"></a>
         </div>
-        <div class="col-xs-6">
-            <p class="filtr__top-sort-text">Сортировать</p>
-            <select class="chosen-select ">
-                <option>Последние добавленные</option>
-                <option>По популярности</option>
+		
+		<div class="col-xs-6">
+            <p class="filtr__top-sort-text"><?=GetMessage("CATALOG_SORT");?></p>
+            <select class="chosen-select" onChange="goTo(this.value)">
+                <?$arSorts = array(
+					"POPULARITY" => array("NAME"=>"SHOW_COUNTER", "ORDER"=>array("desc")),
+					"DATE_CREATE" => array("NAME"=>"DATE_CREATE", "ORDER"=>array("desc")),
+				);
+				foreach($arSorts as $key=>$arSort) {
+					foreach($arSort["ORDER"] as $sortOrder) {
+						$selected="";
+						if ((strtoupper($sCatalogSort)==$arSort["NAME"]) && (strtoupper($sCatalogSortOrder)==strtoupper($sortOrder))) {
+							$selected="selected ";
+						}
+						echo '<option '.$selected.' value="'.$APPLICATION->GetCurPageParam('sort='.strtolower($arSort["NAME"]).'&order='.$sortOrder, array("sort", "order")).'">'.GetMessage("CATALOG_SORT_".$key."_".strtoupper($sortOrder)).'</option>';
+						}
+					}
+				?>
             </select>
         </div>
-
+		
         <div class="col-xs-4">
             <p class="filtr__top-sort-text">Показывать</p>
-            <select class="chosen-select-saw ">
-                <option>30 товаров</option>
-                <option>60 товаров</option>
-                <option>90 товаров</option>
-                <option>120 товаров</option>
+            <select class="chosen-select-saw" onChange="goTo(this.value)">
+				<?$arShow = array(
+					"30 товаров" => '30',
+					"60 товаров" => '60',
+					"90 товаров" => '90',
+					"120 товаров" => '120',
+				);
+				?>
+                <?php 
+				foreach ($arShow as $key=>$value): 
+					$selected ='';
+					$value = $APPLICATION->GetCurPageParam('count='.strtolower($value), array('count'));
+					($_SESSION['count'] == $value)? $selected = 'selected' : '';
+					echo "<option ${selected} value=${value}>${key}</option>";
+				endforeach;
+				?>
             </select>
         </div>
+		<script type="text/javascript">
+		function goTo(url) {
+			location.href = url;
+		}
+		</script>
     </div>
 </div>
 <!-- управление выводом каталога конец -->
 
 <!-- каталог -->
 <div class="col-xs-9">
-    <div class="row">
-        <div class="col-xs-12 saw">
-            <div class="row">
-				<div class="col-xs-12 catalog saw__grid">
-					<div class="row">
 <?$intSectionID = $APPLICATION->IncludeComponent(
 	"bitrix:catalog.section",
-	"shik",
+	($sCatalogDisplay==='block')? 'shik_grid' : 'shik_line',
 	array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-		"ELEMENT_SORT_FIELD" => $arParams["ELEMENT_SORT_FIELD"],
-		"ELEMENT_SORT_ORDER" => $arParams["ELEMENT_SORT_ORDER"],
+		"ELEMENT_SORT_FIELD" => $sCatalogSort,
+		"ELEMENT_SORT_ORDER" => $sCatalogSortOrder,
 		"ELEMENT_SORT_FIELD2" => $arParams["ELEMENT_SORT_FIELD2"],
 		"ELEMENT_SORT_ORDER2" => $arParams["ELEMENT_SORT_ORDER2"],
 		"PROPERTY_CODE" => $arParams["LIST_PROPERTY_CODE"],
@@ -189,7 +238,7 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "shik_mainpage", Array(
 		"SET_TITLE" => $arParams["SET_TITLE"],
 		"SET_STATUS_404" => $arParams["SET_STATUS_404"],
 		"DISPLAY_COMPARE" => $arParams["USE_COMPARE"],
-		"PAGE_ELEMENT_COUNT" => $arParams["PAGE_ELEMENT_COUNT"],
+		"PAGE_ELEMENT_COUNT" => $pageElementCount,
 		"LINE_ELEMENT_COUNT" => $arParams["LINE_ELEMENT_COUNT"],
 		"PRICE_CODE" => $arParams["PRICE_CODE"],
 		"USE_PRICE_COUNT" => $arParams["USE_PRICE_COUNT"],
@@ -205,7 +254,7 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "shik_mainpage", Array(
 		"DISPLAY_BOTTOM_PAGER" => $arParams["DISPLAY_BOTTOM_PAGER"],
 		"PAGER_TITLE" => $arParams["PAGER_TITLE"],
 		"PAGER_SHOW_ALWAYS" => $arParams["PAGER_SHOW_ALWAYS"],
-		"PAGER_TEMPLATE" => $arParams["PAGER_TEMPLATE"],
+		"PAGER_TEMPLATE" => 'catalog_pagination',
 		"PAGER_DESC_NUMBERING" => $arParams["PAGER_DESC_NUMBERING"],
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => $arParams["PAGER_DESC_NUMBERING_CACHE_TIME"],
 		"PAGER_SHOW_ALL" => $arParams["PAGER_SHOW_ALL"],
@@ -247,19 +296,6 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "shik_mainpage", Array(
 	),
 	$component
 );?>
-			
-              
-                
-            </div>
-        </div>
-    <div class="col-xs-12">
-        <div class="line">
-
-        </div>
-    </div>
-    </div>
-
-
 </div>
 <!-- каталог конец -->
 

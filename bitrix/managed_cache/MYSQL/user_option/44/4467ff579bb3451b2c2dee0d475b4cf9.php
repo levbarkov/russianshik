@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001409319169';
-$dateexpire = '001409322769';
+$datecreate = '001409575768';
+$dateexpire = '001409579368';
 $ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:14:"form_element_1";a:1:{s:4:"tabs";s:218:"edit1--#--Новость--,--ACTIVE--#--Публикуется на сайте--,--ACTIVE_FROM--#--Дата новости--,--NAME--#--*Заголовок--,--CODE--#--*Символьный код--,--PREVIEW_TEXT--#--Краткое описание--,--DETAIL_TEXT--#--Полное описание--;--";}}}';
 return true;
 ?>

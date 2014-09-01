@@ -11,6 +11,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);?>
+<pre>
+<?php print_r ($arParams); ?>
+</pre>
 <?$ElementID = $APPLICATION->IncludeComponent(
 	"bitrix:catalog.element",
 	"shik",
