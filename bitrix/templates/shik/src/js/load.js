@@ -57,8 +57,8 @@ $(document).ready(function () {
         var controls = $('.slider__controls-list-item');
         var count = elem.size();
         controls.css('width', 100 / count + '%');
-        controls.each(function (index) {
-            if (index >= count) $(this).css('display', 'none');
+        controls.each(function(index) {
+            if(index >= count) $(this).css('display','none');
         });
     })();
 
@@ -104,6 +104,7 @@ $(document).ready(function () {
             $('#slides-container').slickGoTo(index);
         });
     });
+
 
     $(".chosen-select").chosen({
         disable_search_threshold: 10,

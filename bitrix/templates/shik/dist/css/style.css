@@ -7071,32 +7071,44 @@ body {
   margin: 15px 0px 10px 0px;
 }
 .filtr__left-pick-up {
+  padding-right: 0px;
+  padding-left: 0px;
+  border: none;
+  background: none;
   color: #5e240c;
   display: inline-block;
   font-size: 16px;
   font-family: "PT Sans";
   line-height: 16px;
-  border-bottom: 1px dotted #000000;
+  border-bottom: 1px dotted #5e240c;
   margin: 0px 15px 0px 0px;
 }
-.filtr__left-pick-up:hover {
+.filtr__left-pick-up:hover,
+.filtr__left-pick-up:focus,
+.filtr__left-pick-up:active {
   color: #5e240c;
   border-bottom: none;
-  text-decoration: none;
+  outline: none;
 }
 .filtr__left-pick-reset {
   display: inline-block;
   line-height: 16px;
-  border-bottom: 1px dotted #000000;
+  border: none;
+  border-bottom: 1px dotted #5662ea;
+  background: none;
   font-size: 16px;
   font-family: "PT Sans";
+  padding-right: 0px;
+  padding-left: 0px;
+  color: #5662ea;
   margin: 0px 0px 0px 10px;
-  color: #5662ea;
 }
-.filtr__left-pick-reset:hover {
+.filtr__left-pick-reset:hover,
+.filtr__left-pick-reset:focus,
+.filtr__left-pick-reset:active {
   color: #5662ea;
+  outline: none;
   border-bottom: none;
-  text-decoration: none;
 }
 .filtr__top {
   margin: 10px 0px 0px 0px;

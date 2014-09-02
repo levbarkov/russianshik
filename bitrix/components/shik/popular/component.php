@@ -173,9 +173,11 @@ if($this->StartResultCache(false, ($arParams["CACHE_GROUPS"]==="N"? false: $USER
 			"IBLOCK_ID" => $section['IBLOCK_ID'],
 			"SECTION_ID" => $section['ID'],
 		);
-		$arSelect = array (	"ID", "NAME", "PREVIEW_PICTURE", "DETAIL_PICTURE", "DETAIL_PAGE_URL", "CATALOG_GROUP_1");
+		$arSelect = array (	"ID", "NAME", "PREVIEW_PICTURE", "DETAIL_PICTURE", "DETAIL_PAGE_URL", "CATALOG_GROUP_1", "PROPERTY_85");
 		$items[$section['ID']] = CIBlockElement::GetList($arOrder, $arFilter, false, Array("nPageSize"=>6), $arSelect);
 	}
+	
+	// $priceGroupe = GetCatalogGroup(1);
 	
 	foreach ($items as $sectionId => $sectionValue) {
 		while($product = $sectionValue->GetNext())
@@ -186,6 +188,47 @@ if($this->StartResultCache(false, ($arParams["CACHE_GROUPS"]==="N"? false: $USER
 			$arResult['SECTIONS'][$sectionId]['ITEMS'][] = $product;
 		}
 	}
+	
+	## МАТРИЦА ЦЕН ##
+	$arResultPrices = CIBlockPriceTools::GetCatalogPrices($arParams["IBLOCK_ID"], array($arParams["PRICE_CODE"]));
+	$arPriceTypeID = array();
+	if(!$arParams["USE_PRICE_COUNT"]) {
+		foreach($arResultPrices as &$value) {
+			if (!$value['CAN_VIEW'] && !$value['CAN_BUY'])
+				continue;
+			$arSelect[] = $value["SELECT"];
+			$arFilter["CATALOG_SHOP_QUANTITY_".$value["ID"]] = $arParams["SHOW_PRICE_COUNT"];
+		}
+		if (isset($value))
+			unset($value);
+	} else {
+		foreach ($arResultPrices as &$value) {
+			if (!$value['CAN_VIEW'] && !$value['CAN_BUY'])
+				continue;
+			$arPriceTypeID[] = $value["ID"];
+		}
+		if (isset($value))
+			unset($value);
+	}
+	
+	foreach ($arResult['SECTIONS'] as $sectionKey => $section) {
+		foreach ($section['ITEMS'] as $itemKey => $item) {
+			if($arParams["USE_PRICE_COUNT"]) {
+				if($bCatalog) {
+					$price = CatalogGetPriceTableEx($item["ID"], 0, $arPriceTypeID, 'Y');
+					$arResult['SECTIONS'][$sectionKey]['ITEMS'][$itemKey]['PRICE_MATRIX'] = $price;
+				}
+			} 
+		}
+	}
+	
+	## МАТРИЦА ЦЕН КОНЕЦ ##
+	
+	// echo '<pre>';
+	// print_r($arResult); 
+	// print_r($arPriceTypeID); 
+	// print_r($price); 
+	// echo '</pre>';
 	$this->IncludeComponentTemplate();
 }
 

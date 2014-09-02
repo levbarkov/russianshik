@@ -1,3 +1,3 @@
 <?
-$sSectionName="mending";
+$sSectionName="Ремонт меховых изделий";
 ?>

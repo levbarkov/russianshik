@@ -2,21 +2,21 @@
 $aMenuLinks = Array(
 	Array(
 		"Оптовым клиентам", 
-		"about/customers/", 
+		"pages/customers/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Доставка и оплата", 
-		"about/delivery/", 
+		"about/delivery/pages", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Контакты", 
-		"about/contacts/", 
+		"pages/contacts/", 
 		Array(), 
 		Array(), 
 		"" 

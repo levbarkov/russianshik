@@ -44,8 +44,93 @@ $APPLICATION->SetTitle("Интернет-магазин \"Русский Шик\"");
 		"CACHE_TIME" => "36000000",
 		"CACHE_NOTES" => "",
 		"CACHE_GROUPS" => "Y",
+		"PRICE_CODE" => "BASE",
+		"USE_PRICE_COUNT" => "Y",
 	)
 );
+?>
+
+<?
+
+// $APPLICATION->IncludeComponent("shik:catalog.top", "template1", Array(
+	// "IBLOCK_TYPE" => "catalog",	// Тип инфоблока
+	// "IBLOCK_ID" => "2",	// Инфоблок
+	// "VIEW_MODE" => "SLIDER",	// Показ элементов
+	// "TEMPLATE_THEME" => "site",	// Цветовая тема
+	// "PRODUCT_DISPLAY_MODE" => "Y",
+	// "ADD_PICT_PROP" => "MORE_PHOTO",	// Дополнительная картинка основного товара
+	// "LABEL_PROP" => "NEWPRODUCT",	// Свойство меток товара
+	// "OFFER_ADD_PICT_PROP" => "MORE_PHOTO",
+	// "OFFER_TREE_PROPS" => array(
+		// 0 => "COLOR_REF",
+		// 1 => "SIZES_SHOES",
+		// 2 => "SIZES_CLOTHES",
+	// ),
+	// "SHOW_DISCOUNT_PERCENT" => "Y",	// Показывать процент скидки
+	// "SHOW_OLD_PRICE" => "Y",	// Показывать старую цену
+	// "MESS_BTN_BUY" => "Купить",	// Текст кнопки "Купить"
+	// "MESS_BTN_ADD_TO_BASKET" => "Добавить в корзину",	// Текст кнопки "Добавить в корзину"
+	// "MESS_BTN_DETAIL" => "Подробнее",	// Текст кнопки "Подробнее"
+	// "MESS_NOT_AVAILABLE" => "Товара нет",	// Сообщение об отсутствии товара
+	// "ELEMENT_SORT_FIELD" => "sort",	// По какому полю сортируем элементы
+	// "ELEMENT_SORT_ORDER" => "asc",	// Порядок сортировки элементов
+	// "ELEMENT_SORT_FIELD2" => "name",	// Поле для второй сортировки элементов
+	// "ELEMENT_SORT_ORDER2" => "asc",	// Порядок второй сортировки элементов
+	// "SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+	// "DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
+	// "BASKET_URL" => "/personal/cart/",	// URL, ведущий на страницу с корзиной покупателя
+	// "ACTION_VARIABLE" => "action",	// Название переменной, в которой передается действие
+	// "PRODUCT_ID_VARIABLE" => "id_section",	// Название переменной, в которой передается код товара для покупки
+	// "PRODUCT_QUANTITY_VARIABLE" => "quantity",	// Название переменной, в которой передается количество товара
+	// "PRODUCT_PROPS_VARIABLE" => "prop",	// Название переменной, в которой передаются характеристики товара
+	// "SECTION_ID_VARIABLE" => "SECTION_ID",	// Название переменной, в которой передается код группы
+	// "DISPLAY_COMPARE" => "N",	// Выводить кнопку сравнения
+	// "ELEMENT_COUNT" => "12",	// Количество выводимых элементов
+	// "LINE_ELEMENT_COUNT" => "4",	// Количество элементов выводимых в одной строке таблицы
+	// "PROPERTY_CODE" => array(	// Свойства
+		// 0 => "MINIMUM_PRICE",
+		// 1 => "MAXIMUM_PRICE",
+	// ),
+	// "OFFERS_FIELD_CODE" => array(
+		// 0 => "NAME",
+	// ),
+	// "OFFERS_PROPERTY_CODE" => array(
+		// 0 => "ARTNUMBER",
+		// 1 => "COLOR_REF",
+		// 2 => "SIZES_SHOES",
+		// 3 => "SIZES_CLOTHES",
+		// 4 => "MORE_PHOTO",
+	// ),
+	// "OFFERS_SORT_FIELD" => "sort",
+	// "OFFERS_SORT_ORDER" => "asc",
+	// "OFFERS_SORT_FIELD2" => "id",
+	// "OFFERS_SORT_ORDER2" => "desc",
+	// "OFFERS_LIMIT" => "0",	// Максимальное количество предложений для показа (0 - все)
+	// "PRICE_CODE" => array(	// Тип цены
+		// 0 => "BASE",
+	// ),
+	// "USE_PRICE_COUNT" => "N",	// Использовать вывод цен с диапазонами
+	// "SHOW_PRICE_COUNT" => "1",	// Выводить цены для количества
+	// "PRICE_VAT_INCLUDE" => "Y",	// Включать НДС в цену
+	// "PRODUCT_PROPERTIES" => "",	// Характеристики товара
+	// "USE_PRODUCT_QUANTITY" => "Y",	// Разрешить указание количества товара
+	// "CACHE_TYPE" => "A",	// Тип кеширования
+	// "CACHE_TIME" => "180",	// Время кеширования (сек.)
+	// "CACHE_GROUPS" => "Y",	// Учитывать права доступа
+	// "HIDE_NOT_AVAILABLE" => "N",	// Не отображать товары, которых нет на складах
+	// "CONVERT_CURRENCY" => "N",	// Показывать цены в одной валюте
+	// "OFFERS_CART_PROPERTIES" => array(
+		// 0 => "ARTNUMBER",
+		// 1 => "COLOR_REF",
+		// 2 => "SIZES_SHOES",
+		// 3 => "SIZES_CLOTHES",
+	// )
+	// ),
+	// false,
+	// array(
+	// "ACTIVE_COMPONENT" => "N"
+	// )
+// );
 ?>
 		</div>
 		<!-- популярные предложения конец -->

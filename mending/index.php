@@ -4,105 +4,24 @@ $APPLICATION->SetPageProperty("title", "Ремонт одежды");
 $APPLICATION->SetTitle("Ремонт одежды");
 ?>
 
+<!-- ремонот -->
 <section class="repair">
-        <div class="row">
-            <div class="col-xs-12 repair__title">
-                <h1 class="repair__title">Ремонт меховых изделий</h1>
-            </div>
-            <div class="col-xs-9 repair__wrapper">
+    <div class="row">
+        <div class="col-xs-12 repair__title">
+            <h1 class="repair__title">Ремонт меховых изделий</h1>
+        </div>
+        <div class="col-xs-9 repair__wrapper">
             <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="col-xs-4">
-                            <span class="repair__list-icon">
-                            <span class="repair__list-icon-hover"></span></span>
-                            <h2 class="repair__list-title">Мелкий ремонт</h2>
-                            <ul class="repair__list">
-                                <li class="repair__list-item">Замена пуговиц</li>
-                                <li class="repair__list-item">Замена молний</li>
-                                <li class="repair__list-item">Замена подкладки</li>
-                            </ul>
-                            <a class="repair__list-link" href="#">Весь перечень</a>
-                        </div>
-                        <div class="col-xs-4">
-                            <span class="repair__list-icon-reshaping">
-                            <span class="repair__list-icon-reshaping-hover"></span></span>
-
-                            <h2 class="repair__list-title">Перекрой изделия</h2>
-                            <ul class="repair__list">
-                                <li class="repair__list-item">Подгонка по фигуре</li>
-                                <li class="repair__list-item">Укоротить изделие</li>
-                                <li class="repair__list-item">Укоротить рукава</li>
-                            </ul>
-                            <a class="repair__list-link" href="#">Весь перечень</a>
-                        </div>
-                        <div class="col-xs-4">
-                            <span class="repair__list-icon-restoration">
-                            <span class="repair__list-icon-restoration-hover"></span></span>
-
-                            <h2 class="repair__list-title">Реставрация</h2>
-                            <ul class="repair__list">
-                                <li class="repair__list-item">Ремонт разрывов</li>
-                                <li class="repair__list-item">Устранение потертостей</li>
-                                <li class="repair__list-item">Химчистка после моли</li>
-                            </ul>
-                            <a class="repair__list-link" href="#">Весь перечень</a>
-                        </div>
-                    </div>
-                </div>
+                <?$APPLICATION->IncludeFile(SITE_DIR."include/mending_top.php", Array(), Array("MODE" => "html", "NAME" => 'Наши услуги',));?>
             </div>
-            <div class="col-xs-12 btn-block">
-                <a class="btn btn-default repair__download-btn" href="#">Скачать прейскурант цен на ремонт изделий</a>
+			<div class="col-xs-12">
+				<?$APPLICATION->IncludeFile(SITE_DIR."include/mending_center_button.php", Array(), Array("MODE" => "html", "NAME" => 'Кнопка скачать прейскурант',));?>
+			</div>
+			<div class="col-xs-12">
+				<?$APPLICATION->IncludeFile(SITE_DIR."include/mending_bottom.php", Array(), Array("MODE" => "html", "NAME" => 'Порядок работы по ремонту мехового изделия',));?>
             </div>
-            <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h1 class="repair__order-title">Порядок работы по ремонту мехового изделия</h1>
-                    </div>
-                    <div class="col-xs-3 repair__order-item">
-
-                        <div class="repair__order-icon-wrapper">
-                        <div class="repair__order-icon">
-                           <span class="repair__order-icon-receiving"> </span>
-                        </div>
-
-                        </div>
-                        <p class="repair__order-icon-text">Прием изделия</p>
-                    </div>
-                    <div class="col-xs-3 repair__order-item">
-                        <div class="repair__order-icon-wrapper">
-                        <div class="repair__order-icon">
-                           <span class="repair__order-icon-money"> </span>
-                        </div>
-
-                        </div>
-                        <p class="repair__order-icon-text">Оценивание работ по
-                            <a class="repair__order-icon-link" href="#">прайсу</a></p>
-                    </div>
-                    <div class="col-xs-3 repair__order-item">
-                        <div class="repair__order-icon-wrapper">
-                            <div class="repair__order-icon">
-                                <span class="repair__order-icon-calendar"> </span>
-                            </div>
-
-                        </div>
-                        <p class="repair__order-icon-text">Ремонтные работы до двух недель</p>
-                    </div>
-                    <div class="col-xs-3 repair__order-item">
-                        <div class="repair__order-icon-wrapper">
-                            <div class="repair__order-icon">
-                                <span class="repair__order-icon-surrender"> </span>
-                            </div>
-
-                        </div>
-                        <span class="repair__order-icon-text">Сдача работы</span>
-                    </div>
-
-
-                </div>
-            </div>
-            </div>
-            <div class="col-xs-3 tips">
+        </div>
+        <div class="col-xs-3 tips">
 <?
 $APPLICATION->IncludeComponent("bitrix:news.list", "shik_mainpage", Array(
 	"IBLOCK_TYPE" => "content",	// Тип информационного блока (используется только для проверки)
@@ -158,8 +77,20 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "shik_mainpage", Array(
 	false
 );
 ?>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
+<!-- ремонот конец -->
+
+</div>
+<!-- заголовок и основная часть конец-->
+
+<!-- предложение шубы по индивидуальным меркам -->
+<div class="sections sections-transparent">
+    <div class="row">
+        <?$APPLICATION->IncludeFile(SITE_DIR."include/offer.php", Array(), Array("MODE" => "html", "NAME" => GetMessage("OFFER"),));?>
+    </div>
+</div>
+<!-- предложение шубы по индивидуальным меркам конец -->
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -12,7 +12,11 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
+<pre>
+<?php
+// print_r($arResult['ITEMS']);
+?>
+</pre>
 <?
 if (!empty($arResult['ITEMS'])):
 ?>
@@ -27,12 +31,20 @@ if (!empty($arResult['ITEMS'])):
 								<a class="catalog__grid-item-photo-link" href="<?=$product['DETAIL_PAGE_URL'];?>">
 									<div class="catalog__grid-item-photo-img-wrapper">
 										<img class="catalog__grid-item-photo-img" src="<?=$product['DETAIL_PICTURE']['SRC']; ?>" alt="<?=$product['NAME'];?>"/>
-										<span class="catalog__grid-item-sale-alert">скидка</span>
+										<?php 
+										if ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] != $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE']): 
+										?>
+										<span class="catalog__grid-item-sale-alert"><?=GetMessage('SHIK_CATALOG_DISCOUNT');?></span>
+										<?php
+										elseif ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] == $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'] AND !empty($product['PROPERTIES']['NOVINKA']['VALUE'])):
+										?>
+										<span class="catalog__grid-item-new-alert"><?=GetMessage('SHIK_CATALOG_NEW');?></span>
+										<?php endif; ?>
 									</div>
 								</a>
 							</div>
 							<a class="catalog__grid-item-model"><?=$product['NAME'];?></a>
-							<?php if ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] != $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB')): ?>
+							<?php if ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] != $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE']): ?>
 								<p class="catalog__grid-item-price"><?=$product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
 								<p class="catalog__grid-item-price-old"><?=$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
 							<?php else: ?>

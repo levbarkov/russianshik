@@ -31,6 +31,10 @@ $curPage = $APPLICATION->GetCurPage(true);
     <!--[if lt IE 9]>
     <script src="<?=SITE_TEMPLATE_PATH.'/bower_components/respond/dest/respond.min.js'?>"></script>
     <script src="<?=SITE_TEMPLATE_PATH.'/bower_components/html5shiv/dist/html5shiv.min.js'?>"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	
+	<script src="<?=SITE_TEMPLATE_PATH.'/src/js/phone.js';?>"></script>
+    <script src="<?=SITE_TEMPLATE_PATH.'/src/js/jquery.maskedinput.js';?>" type="text/javascript"></script>
     <![endif]-->
 	<?php if (CSite::InDir(SITE_DIR.'index.php'))	$isFrontPage = true; ?>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Narrow:400,700|PT+Serif:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -60,6 +64,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <![endif]-->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="<?=SITE_TEMPLATE_PATH?>/bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="<?=SITE_TEMPLATE_PATH.'/dist/js/main.js';?>"></script>
+<!--<script src="<?=SITE_TEMPLATE_PATH.'/dist/js/main.min.js';?>"></script>-->
 
 <div id="panel"><?$APPLICATION->ShowPanel();?></div>
 <?$APPLICATION->IncludeComponent("bitrix:eshop.banner", "", array());?>
@@ -176,17 +182,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="col-xs-12 goods">
             <div class="goods__breadcrumb">
 				<ol class="breadcrumb goods__breadcrumb-list">
-<?
-if(!$isFrontPage): 
-	$APPLICATION->IncludeComponent("bitrix:breadcrumb", "shik", array(
-	"START_FROM" => "0",
-	"PATH" => "",
-	"SITE_ID" => "-"
-	),
-	false
-);
-endif;
-?>
+					<?
+					if(!$isFrontPage): 
+						$APPLICATION->IncludeComponent("shik:breadcrumb", "shik", array(
+						"START_FROM" => "0",
+						"PATH" => "",
+						"SITE_ID" => "s1"
+						),
+						false
+					);
+					endif;
+					?>
 				</ol>
             </div>
         </div>

@@ -5,7 +5,7 @@
 ?>
 <?$APPLICATION->IncludeComponent("bitrix:catalog.viewed.products", "shik", Array(
 	"HIDE_NOT_AVAILABLE" => "N",	// Не отображать товары, которых нет на складах
-	"PAGE_ELEMENT_COUNT" => "5",	// Количество элементов на странице
+	"PAGE_ELEMENT_COUNT" => "4",	// Количество элементов на странице
 	"SHOW_DISCOUNT_PERCENT" => "Y",	// Показывать процент скидки
 	"PRODUCT_SUBSCRIPTION" => "N",	// Разрешить оповещения для отсутствующих товаров
 	"SHOW_NAME" => "Y",	// Показывать название

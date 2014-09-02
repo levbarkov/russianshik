@@ -1,6 +1,5 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$filterView = (COption::GetOptionString("main", "wizard_template_id", "eshop_adapt_horizontal", SITE_ID) == "eshop_adapt_vertical" ? "HORIZONTAL" : "VERTICAL");
 ?>
 
 <?$APPLICATION->IncludeComponent("bitrix:catalog", "shik", Array(

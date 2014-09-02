@@ -155,31 +155,39 @@
       display: block;
       margin: 15px 0px 10px 0px;
       &-up {
+        padding-right: 0px;
+        padding-left: 0px;
+        border: none;
+        background: none;
         color: @main_color;
         display: inline-block;
         font-size: 16px;
         font-family: @main_font;
         line-height: 16px;
-        border-bottom: 1px dotted #000000;
+        border-bottom: 1px dotted @main_color;
         margin: 0px 15px 0px 0px;
-        &:hover {
+        &:hover, &:focus, &:active {
           color: @main_color;
           border-bottom: none;
-          text-decoration: none;
+          outline: none;
         }
       }
       &-reset {
         display: inline-block;
         line-height: 16px;
-        border-bottom: 1px dotted #000000;
+        border: none;
+        border-bottom: 1px dotted #5662ea;
+        background: none;
         font-size: 16px;
         font-family: @main_font;
-        margin: 0px 0px 0px 10px;
+        padding-right: 0px;
+        padding-left: 0px;
         color: #5662ea;
-        &:hover {
+        margin: 0px 0px 0px 10px;
+        &:hover, &:focus, &:active {
           color: #5662ea;
+          outline: none;
           border-bottom: none;
-          text-decoration: none;
         }
       }
     }
@@ -420,7 +428,7 @@
           font-size: 12px;
           font-weight: bold;
           text-transform: uppercase;
-          padding: 6px 5px 6px 10px;
+          padding: 7px 5px 5px 10px;
           margin: 0px 15px 0px 0px;
           &:after {
             position: absolute;
@@ -432,6 +440,32 @@
             border-style: solid;
             border-width: 14px 0 15px 10px;
             border-color: transparent transparent transparent #f11e1e;
+          }
+        }
+      }
+      &-new {
+        &-alert {
+          display: inline-block;
+          top: 0px;
+          position: relative;
+          background-color: #000000;
+          color: #fff; // text color
+          font-family: "PT Serif", serif;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 7px 5px 5px 10px;
+          margin: 0px 15px 0px 0px;
+          &:after {
+            position: absolute;
+            left: 100%;
+            top: 0px;
+            content: ' ';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 14px 0 15px 10px;
+            border-color: transparent transparent transparent #000000;
           }
         }
       }
@@ -505,7 +539,7 @@
     }
     &-col {
       &-alert {
-        width: 5%;
+        width: 95px;
       }
       &-name {
         width: 400px;

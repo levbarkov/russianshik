@@ -17,6 +17,8 @@ CJSCore::Init(array("fx"));
 if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParams["TEMPLATE_THEME"].'/colors.css'))
 	$APPLICATION->SetAdditionalCSS($this->GetFolder().'/themes/'.$arParams["TEMPLATE_THEME"].'/colors.css');
 ?>
+<h3 class="filtr__left-amount"><?=GetMessage('CATALOG_SMARTFILTER_ITEMS_COUNT');?> <?=$arResult['FINDED_COUNT'];?></h3>
+<div class="filtr__left">
 
 <form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
 
@@ -63,10 +65,10 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParam
 					?>
 					
 					<div class="filtr__left-price">
-						<p class="filtr__left-price-title">÷ена <span class="filtr__left-price-title-span">(руб.)</span>
+						<p class="filtr__left-price-title"><?=GetMessage('CATALOG_SMARTFILTER_PRICE');?> <span class="filtr__left-price-title-span"><?=GetMessage('CATALOG_SMARTFILTER_RUB');?></span>
 						</p>
 						<div class="filtr__left-price-align">
-							<p class="filtr__left-price-before">от</p>
+							<p class="filtr__left-price-before"><?=GetMessage('CATALOG_SMARTFILTER_FROM');?></p>
 							<input
 								class="min-price"
 								type="text"
@@ -76,7 +78,7 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParam
 								size="5"
 								onkeyup="smartFilter.keyup(this)"
 							/>
-							<p class="filtr__left-price-after">до</p>
+							<p class="filtr__left-price-after"><?=GetMessage('CATALOG_SMARTFILTER_TO');?></p>
 								<input
 									class="max-price"
 									type="text"
@@ -121,3 +123,5 @@ if (file_exists($_SERVER["DOCUMENT_ROOT"].$this->GetFolder().'/themes/'.$arParam
 <script>
 	var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>');
 </script>
+
+</div>

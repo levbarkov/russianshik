@@ -1,3 +1,3 @@
 <?
-$sSectionName="custom tailoring";
+$sSectionName="Пошив на заказ";
 ?>

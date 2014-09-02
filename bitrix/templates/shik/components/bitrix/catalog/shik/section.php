@@ -23,12 +23,12 @@ $verticalGrid = ('Y' == $arParams['USE_FILTER'] && $arParams["FILTER_VIEW_MODE"]
 <div class="row">
 
 <div class="col-xs-12">
-    <h1 class="catalog__title">Примеp длиного названия/заголовка</h1>
+    <h1 class="catalog__title"><?=$arResult['SECTION']['NAME'];?></h1>
 </div>
 <div class="col-xs-3 ">
-    <h3 class="filtr__left-amount">Всего позиций</h3>
+    
 
-    <div class="filtr__left">
+    <!-- умный фильтр -->
 		<?
 			$APPLICATION->IncludeComponent(
 			"shik:catalog.smart.filter",
@@ -36,6 +36,7 @@ $verticalGrid = ('Y' == $arParams['USE_FILTER'] && $arParams["FILTER_VIEW_MODE"]
 			Array(
 				"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 				"IBLOCK_ID" => $arParams["IBLOCK_ID"],
+				"IBLOCK_SECTION_ID" => $arResult['SECTION']['ID'],
 				"SECTION_ID" => $arCurSection['ID'],
 				"FILTER_NAME" => $arParams["FILTER_NAME"],
 				"PRICE_CODE" => $arParams["PRICE_CODE"],
@@ -53,7 +54,7 @@ $verticalGrid = ('Y' == $arParams['USE_FILTER'] && $arParams["FILTER_VIEW_MODE"]
 			array('HIDE_ICONS' => 'Y')
 			);
 		?>
-    </div>
+	<!-- умный фильтр конец -->
     <SCRIPT src="<?=SITE_TEMPLATE_PATH.'/bower_components/chosen_v1.1.0/chosen.jquery.js';?>"></SCRIPT>
 
 	<!-- советы портного -->
