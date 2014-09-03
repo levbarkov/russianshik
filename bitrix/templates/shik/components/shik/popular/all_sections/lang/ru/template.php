@@ -6,5 +6,6 @@
 	
 	$MESS["SHOWCASE_DISCOUNT"] = "скидка";
 	$MESS["SHOWCASE_NEW"] = "новинка";
+	$MESS["SHOWCASE_RUB"] = "руб.";
 	
 ?>

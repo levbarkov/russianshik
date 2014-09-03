@@ -26,9 +26,16 @@ if (!empty($arResult['ITEMS'])):
 						<div class="col-xs-12 catalog__linear-item">
 							<table class="linear__table">
 								<tr class="linear__table-row">
-									<td class="linear__table-col-alert">
-										<span class="catalog__linear-item-new-alert">новинка</span>
-									</td>
+									<?php 
+									if ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] != $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE']): 
+									?>
+									<td class="linear__table-col-alert"><span class="catalog__linear-item-sale-alert">скидка</span>
+                                    </td>
+									<?php
+									elseif ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] == $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'] AND !empty($product['PROPERTIES']['NOVINKA']['VALUE'])):
+									?>
+									<td class="linear__table-col-alert"><span class="catalog__linear-item-new-alert">новинка</span></td>
+									<?php endif; ?>
 									<td class="linear__table-col-name">
 										<a class="catalog__linear-item-name" href="<?=$product['DETAIL_PAGE_URL'];?>"><?=$product['NAME'];?></a>
 									</td>
@@ -41,10 +48,10 @@ if (!empty($arResult['ITEMS'])):
 									
 									<?php if ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] != $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB')): ?>
 									<td class="linear__table-col-price-old">
-										<p class="catalog__linear-item-price-old"><?=$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
+										<p class="catalog__linear-item-price-old"><?=(int)$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
 									</td>
 									<td class="linear__table-col-price-new">
-										<p class="catalog__linear-item-price-new"><?=$product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
+										<p class="catalog__linear-item-price-new"><?=(int)$product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
 									</td>
 									<?php else: ?>
 									
@@ -52,7 +59,7 @@ if (!empty($arResult['ITEMS'])):
 										<p class="catalog__linear-item-price-old"></p>
 									</td>
 									<td class="linear__table-col-price-new"> 
-										<p class="catalog__linear-item-price-new"><?=$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
+										<p class="catalog__linear-item-price-new"><?=(int)$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
 									</td>
 									<?php endif; ?>
 								</tr>

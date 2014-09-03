@@ -32,7 +32,7 @@ if (!empty($arResult['ITEMS']))
 				</a>
 			</div>
             <a class="searched__model"><?php echo $arItem['NAME']; ?></a>
-            <p class="searched__price"><?php echo $arItem['CATALOG_PRICE_1']; ?> руб.</p>
+            <p class="searched__price"><?php echo (int)$arItem['CATALOG_PRICE_1']; ?> руб.</p>
         </div>
 	<?php endforeach; ?>
 	</div>

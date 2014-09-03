@@ -1,8 +1,8 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001409657226';
-$dateexpire = '001445657226';
-$ser_content = 'a:2:{s:7:"CONTENT";s:10841:"
+$datecreate = '001409728461';
+$dateexpire = '001445728461';
+$ser_content = 'a:2:{s:7:"CONTENT";s:10928:"
 <section class="goods">
     <div class="row">
 		<!-- галерея -->
@@ -161,18 +161,6 @@ BX.message({
         </div>
 			<div class="col-xs-3 searched__item">
 			<div class="searched__item-photo">
-				<a class="searched__item-photo-link" href="/catalog/furskins/shkura_bizona/">
-					<div class="searched__item-photo-img-wrapper">
-						<img class="searched__item-photo-img" src="/upload/iblock/011/01169f6d1faaf6e3326572061662b70c.jpg" alt="#"/>
-						<span class="searched__item-new-alert">new</span>
-					</div>
-				</a>
-			</div>
-            <a class="searched__model">Шкура бизона</a>
-            <p class="searched__price">10000.00 руб.</p>
-        </div>
-			<div class="col-xs-3 searched__item">
-			<div class="searched__item-photo">
 				<a class="searched__item-photo-link" href="/catalog/women/super_shuba/">
 					<div class="searched__item-photo-img-wrapper">
 						<img class="searched__item-photo-img" src="/upload/iblock/7aa/7aa2d14b9df1c2a4a0eb103fd6ef1da9.jpg" alt="#"/>
@@ -181,7 +169,31 @@ BX.message({
 				</a>
 			</div>
             <a class="searched__model">Супер шуба</a>
-            <p class="searched__price">15000.00 руб.</p>
+            <p class="searched__price">15000 руб.</p>
+        </div>
+			<div class="col-xs-3 searched__item">
+			<div class="searched__item-photo">
+				<a class="searched__item-photo-link" href="/catalog/accessories/shapka_norkovaya/">
+					<div class="searched__item-photo-img-wrapper">
+						<img class="searched__item-photo-img" src="/upload/iblock/e9f/e9f7ca88f05dd766f4a97d1e325f3fb3.jpg" alt="#"/>
+						<span class="searched__item-new-alert">new</span>
+					</div>
+				</a>
+			</div>
+            <a class="searched__model">Шапка норковая</a>
+            <p class="searched__price">1000 руб.</p>
+        </div>
+			<div class="col-xs-3 searched__item">
+			<div class="searched__item-photo">
+				<a class="searched__item-photo-link" href="/catalog/women/model_k_51_iz_loskuta_mutona_s_kapyushonom/">
+					<div class="searched__item-photo-img-wrapper">
+						<img class="searched__item-photo-img" src="/upload/iblock/1a6/1a6f943c80315712252a6d4fd0ef31cc.jpg" alt="#"/>
+						<span class="searched__item-new-alert">new</span>
+					</div>
+				</a>
+			</div>
+            <a class="searched__model">Модель К 51 из лоскута мутона с капюшоном</a>
+            <p class="searched__price">27000 руб.</p>
         </div>
 			<div class="col-xs-3 searched__item">
 			<div class="searched__item-photo">
@@ -193,19 +205,7 @@ BX.message({
 				</a>
 			</div>
             <a class="searched__model">№14 CarolinaKmit B96</a>
-            <p class="searched__price">123444.00 руб.</p>
-        </div>
-			<div class="col-xs-3 searched__item">
-			<div class="searched__item-photo">
-				<a class="searched__item-photo-link" href="/catalog/women/tsvetnye_korondashi/">
-					<div class="searched__item-photo-img-wrapper">
-						<img class="searched__item-photo-img" src="/upload/iblock/c19/c19ef8be1259a060281026046da7fdfe.jpg" alt="#"/>
-						<span class="searched__item-new-alert">new</span>
-					</div>
-				</a>
-			</div>
-            <a class="searched__model">Цветные корондаши</a>
-            <p class="searched__price">12345.00 руб.</p>
+            <p class="searched__price">123444 руб.</p>
         </div>
 		</div>
 </section>
@@ -245,21 +245,22 @@ BX.message({
 			<p class="individual-coat__form-body-text">
                 Оставьте заявку и мы перезвоним вам, чтобы уточнить детали.
             </p>
+			 
 
-            <form action="" method="">
-                <ul class="individual-coat__form-list">
-                    <li><p class="individual-coat__form-title">Как вас зовут</p></li>
-                    <li><input class="individual-coat__form-name" name="FIO" type="text"/></li>
-                </ul>
-                <ul class="individual-coat__form-list">
-                    <li> <p class="individual-coat__form-title">Ваш номер телефона</p></li>
-
-                    <li>
-						<input class="individual-coat__form-phone" name="phone" id="phone" placeholder="+7(___)-___-____" pattern="+7 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" required/>
-					</li>
-				</ul>
-                <input type="submit" class="btn btn-default individual-coat__body-btn" href="#" value="Отправить заявку"/>
-            </form>
+<form action="/catalog/women/14_carolinakmit_b96/" method="POST">
+    <ul class="individual-coat__form-list">
+        <li><p class="individual-coat__form-title">Как вас зовут<span class="mf-req">*</span></p></li>
+        <li><input class="individual-coat__form-name" name="NAME" type="text"/></li>
+    </ul>
+    <ul class="individual-coat__form-list">
+        <li> <p class="individual-coat__form-title">Ваш номер телефона<span class="mf-req">*</span></p></li>
+		<li>
+			<input class="individual-coat__form-phone" name="PHONE" id="phone" placeholder="+7(___)-___-____" pattern="+7 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" required/>
+		</li>
+	</ul>
+	<input type="hidden" name="PARAMS_HASH" value="50bb5bdde66706a07e82d70ead929632">
+	<input type="submit" class="btn btn-default individual-coat__body-btn" href="#" name="submit" value="Отправить заявку">
+</form>
         </div>
     </div>
 </div>    </div>

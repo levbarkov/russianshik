@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001409656865';
-$dateexpire = '001445656865';
+$datecreate = '001409725526';
+$dateexpire = '001445725526';
 $ser_content = 'a:2:{s:7:"CONTENT";s:988:"	<h2 class="tips__title">
 		«Советы портного»
    </h2>

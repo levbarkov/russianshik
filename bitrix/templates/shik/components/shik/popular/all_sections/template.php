@@ -25,7 +25,12 @@
 						<?php endif; ?>
                     </a>
 					<a class="popular__list-item-link" href="<?php echo $product['DETAIL_PAGE_URL']; ?>"><?php echo $product['NAME']; ?></a>
-					<p class="popular__list-item-cost"><?php echo ((int)$product['CATALOG_PRICE_1']); ?></p>
+					<?php if ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] != $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE']): ?>
+						<p class="popular__list-item-cost"><?php echo ((int)$product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE']); ?> <?php echo GetMessage("SHOWCASE_RUB"); ?></p>
+						<p class="popular__list-item-cost"><?php echo ((int)$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE']); ?> <?php echo GetMessage("SHOWCASE_RUB"); ?></p>
+					<?php else: ?>
+						<p class="popular__list-item-cost"><?php echo ((int)$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE']); ?> <?php echo GetMessage("SHOWCASE_RUB"); ?></p>
+					<?php endif; ?>
 				</div>
 			</div>
 		<?php endforeach; ?>

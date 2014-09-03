@@ -12,11 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<pre>
-<?php
-// print_r($arResult['ITEMS']);
-?>
-</pre>
+
 <?
 if (!empty($arResult['ITEMS'])):
 ?>
@@ -45,10 +41,10 @@ if (!empty($arResult['ITEMS'])):
 							</div>
 							<a class="catalog__grid-item-model"><?=$product['NAME'];?></a>
 							<?php if ($product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'] != $product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE']): ?>
-								<p class="catalog__grid-item-price"><?=$product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
-								<p class="catalog__grid-item-price-old"><?=$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
+								<p class="catalog__grid-item-price"><?=(int)$product['PRICE_MATRIX']['MATRIX'][1][0]['DISCOUNT_PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
+								<p class="catalog__grid-item-price-old"><?=(int)$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
 							<?php else: ?>
-								<p class="catalog__grid-item-price"><?=$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
+								<p class="catalog__grid-item-price"><?=(int)$product['PRICE_MATRIX']['MATRIX'][1][0]['PRICE'].' '.GetMessage('SHIK_CATALOG_RUB'); ?></p>
 							<?php endif; ?>
 						</div>
 					<?php endforeach; ?>

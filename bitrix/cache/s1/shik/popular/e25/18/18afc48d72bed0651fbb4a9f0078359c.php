@@ -1,8 +1,8 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001409665769';
-$dateexpire = '001445665769';
-$ser_content = 'a:2:{s:7:"CONTENT";s:4748:"
+$datecreate = '001409725469';
+$dateexpire = '001445725469';
+$ser_content = 'a:2:{s:7:"CONTENT";s:5025:"
 <div class="popular__controls">
     <h3 class="popular__title">Популярные товары</h3>
     <button class="btn btn-default popular__controls-btn active" data-filter=".category-17">Женская коллекция</button>
@@ -17,8 +17,8 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:4748:"
                         <img class="popular__list-item-img" src="/upload/iblock/e9f/e9f7ca88f05dd766f4a97d1e325f3fb3.jpg" alt="Шапка норковая"/>
                                             </a>
 					<a class="popular__list-item-link" href="/catalog/accessories/shapka_norkovaya/">Шапка норковая</a>
-					<p class="popular__list-item-cost">1000</p>
-				</div>
+											<p class="popular__list-item-cost">1000 руб.</p>
+									</div>
 			</div>
 				
 						<div class="popular__list-item-col category-17">
@@ -28,8 +28,9 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:4748:"
                         							<span class="popular__list-item-alert">скидка</span>
 						                    </a>
 					<a class="popular__list-item-link" href="/catalog/women/super_shuba/">Супер шуба</a>
-					<p class="popular__list-item-cost">15000</p>
-				</div>
+											<p class="popular__list-item-cost">14000 руб.</p>
+						<p class="popular__list-item-cost">15000 руб.</p>
+									</div>
 			</div>
 					<div class="popular__list-item-col category-17">
 				<div class="popular__list-item">
@@ -38,8 +39,9 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:4748:"
                         							<span class="popular__list-item-alert">скидка</span>
 						                    </a>
 					<a class="popular__list-item-link" href="/catalog/women/slon_obyknovennyy/">Слон обыкновенный</a>
-					<p class="popular__list-item-cost">1000</p>
-				</div>
+											<p class="popular__list-item-cost">800 руб.</p>
+						<p class="popular__list-item-cost">1000 руб.</p>
+									</div>
 			</div>
 					<div class="popular__list-item-col category-17">
 				<div class="popular__list-item">
@@ -48,8 +50,18 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:4748:"
                         							<span class="popular__list-item-alert">скидка</span>
 						                    </a>
 					<a class="popular__list-item-link" href="/catalog/women/model_k_51_iz_loskuta_mutona_s_kapyushonom/">Модель К 51 из лоскута мутона с капюшоном</a>
-					<p class="popular__list-item-cost">27000</p>
-				</div>
+											<p class="popular__list-item-cost">5000 руб.</p>
+						<p class="popular__list-item-cost">27000 руб.</p>
+									</div>
+			</div>
+					<div class="popular__list-item-col category-17">
+				<div class="popular__list-item">
+					<a href="/catalog/women/14_carolinakmit_b96/" class="popular__list-item-img-wrapper">
+                        <img class="popular__list-item-img" src="/upload/iblock/09c/09ccd27d6ca6aecfcf17fe491bd994fc.jpg" alt="№14 CarolinaKmit B96"/>
+                                            </a>
+					<a class="popular__list-item-link" href="/catalog/women/14_carolinakmit_b96/">№14 CarolinaKmit B96</a>
+											<p class="popular__list-item-cost">123444 руб.</p>
+									</div>
 			</div>
 					<div class="popular__list-item-col category-17">
 				<div class="popular__list-item">
@@ -58,17 +70,8 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:4748:"
                         							<span class="popular__list-item-alert">новинка</span>
 						                    </a>
 					<a class="popular__list-item-link" href="/catalog/women/tsvetnye_korondashi/">Цветные корондаши</a>
-					<p class="popular__list-item-cost">12345</p>
-				</div>
-			</div>
-					<div class="popular__list-item-col category-17">
-				<div class="popular__list-item">
-					<a href="/catalog/women/14_carolinakmit_b96/" class="popular__list-item-img-wrapper">
-                        <img class="popular__list-item-img" src="/upload/iblock/09c/09ccd27d6ca6aecfcf17fe491bd994fc.jpg" alt="№14 CarolinaKmit B96"/>
-                                            </a>
-					<a class="popular__list-item-link" href="/catalog/women/14_carolinakmit_b96/">№14 CarolinaKmit B96</a>
-					<p class="popular__list-item-cost">123444</p>
-				</div>
+											<p class="popular__list-item-cost">12345 руб.</p>
+									</div>
 			</div>
 				
 						<div class="popular__list-item-col category-19">
@@ -78,8 +81,8 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:4748:"
                         							<span class="popular__list-item-alert">новинка</span>
 						                    </a>
 					<a class="popular__list-item-link" href="/catalog/furskins/shkura_bizona/">Шкура бизона</a>
-					<p class="popular__list-item-cost">10000</p>
-				</div>
+											<p class="popular__list-item-cost">10000 руб.</p>
+									</div>
 			</div>
 				
 	</div>

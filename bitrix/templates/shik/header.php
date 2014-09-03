@@ -24,8 +24,8 @@ $curPage = $APPLICATION->GetCurPage(true);
 	
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 	
-	<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/dist/css/style.css')?>
 	<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/dist/css/libs.css')?>
+	<?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/dist/css/style.css')?>
 	
 	<!--<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH.'/dist/css/style.css'?>"/>-->
     <!--[if lt IE 9]>

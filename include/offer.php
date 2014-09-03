@@ -7,21 +7,15 @@
 			<p class="individual-coat__form-body-text">
                 Оставьте заявку и мы перезвоним вам, чтобы уточнить детали.
             </p>
-
-            <form action="" method="">
-                <ul class="individual-coat__form-list">
-                    <li><p class="individual-coat__form-title">Как вас зовут</p></li>
-                    <li><input class="individual-coat__form-name" name="FIO" type="text"/></li>
-                </ul>
-                <ul class="individual-coat__form-list">
-                    <li> <p class="individual-coat__form-title">Ваш номер телефона</p></li>
-
-                    <li>
-						<input class="individual-coat__form-phone" name="phone" id="phone" placeholder="+7(___)-___-____" pattern="+7 ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" required/>
-					</li>
-				</ul>
-                <input type="submit" class="btn btn-default individual-coat__body-btn" href="#" value="Отправить заявку"/>
-            </form>
+			 <?$APPLICATION->IncludeComponent("bitrix:main.feedback", "coat_offer", Array(
+				"USE_CAPTCHA" => "Y",
+				"OK_TEXT" => "Спасибо, ваше сообщение принято.",
+				"EMAIL_TO" => "my@email.com",
+				"REQUIRED_FIELDS" => Array("NAME","PHONE"),
+				// "EVENT_MESSAGE_ID" => Array("5")
+			),
+			false
+			);?>
         </div>
     </div>
 </div>
